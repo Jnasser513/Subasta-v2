@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lots_navigation"
+    app:startDestination="@id/availableLotsFragment">
+
+    <fragment
+        android:id="@+id/inscriptionsFragment"
+        android:name="com.app.subastas.view.fragments.InscriptionsFragment"
+        android:label="InscriptionsFragment"
+        tools:layout="@layout/inscriptions_fragment">
+        <action
+            android:id="@+id/action_inscriptionsFragment_to_registeredLotsFragment"
+            app:destination="@id/registeredLotsFragment" />
+        <action
+            android:id="@+id/action_inscriptionsFragment_to_wonLotsFragment"
+            app:destination="@id/wonLotsFragment" />
+        <action
+            android:id="@+id/action_inscriptionsFragment_to_auctionStartFragment"
+            app:destination="@id/auctionStartFragment" />
+        <action
+            android:id="@+id/action_inscriptionsFragment_to_dialogConfirmPay"
+            app:destination="@id/dialogConfirmPay" />
+        <action
+            android:id="@+id/action_inscriptionsFragment_to_paymentMethodFragment2"
+            app:destination="@id/paymentMethodFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/availableLotsFragment"
+        android:name="com.app.subastas.view.fragments.AvailableLotsFragment"
+        android:label="AvailableLotsFragment"
+        tools:layout="@layout/available_lost_fragment">
+        <action
+            android:id="@+id/action_availableLotsFragment_to_inscriptionsFragment"
+            app:destination="@id/inscriptionsFragment" />
+        <action
+            android:id="@+id/action_availableLotsFragment_to_dialogLotDetailFragment"
+            app:destination="@id/dialogLotDetailFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogBookingLots2"
+        android:name="com.app.subastas.view.fragments.dialog.DialogBookingLots"
+        android:label="DialogBookingLots"
+        tools:layout="@layout/dialog_booking_lots">
+        <argument
+            android:name="precio"/>
+        <argument
+            android:name="idLote"/>
+        <argument
+            android:name="porc"
+            app:argType="long"/>
+        <action
+            android:id="@+id/action_dialogBookingLots2_to_paymentMethodFragment2"
+            app:destination="@id/paymentMethodFragment2" />
+    </dialog>
+    <dialog
+        android:id="@+id/dialogLotDetailFragment"
+        android:name="com.app.subastas.view.fragments.dialog.DialogLotDetailFragment"
+        android:label="DialogLotDetailFragment"
+        tools:layout="@layout/dialog_lot_detail_fragment">
+        <action
+            android:id="@+id/action_dialogLotDetailFragment_to_dialogBookingLots2"
+            app:destination="@id/dialogBookingLots2" />
+        <argument
+            android:name="lot"
+            app:argType="com.app.subastas.data.entity.model.lots.LotesDetail"/>
+    </dialog>
+    <fragment
+        android:id="@+id/paymentMethodFragment2"
+        android:name="com.app.subastas.view.fragments.PaymentMethodFragment"
+        android:label="PaymentMethodFragment"
+        tools:layout="@layout/payment_method_fragment">
+        <argument
+            android:name="idLote"/>
+        <argument
+            android:name="precio"/>
+        <argument
+            android:name="porc"
+            app:argType="long"/>
+        <action
+            android:id="@+id/action_paymentMethodFragment2_to_paymentMethodCardFragment2"
+            app:destination="@id/paymentMethodCardFragment2" />
+        <action
+            android:id="@+id/action_paymentMethodFragment2_to_paymentMethodTransferFragment2"
+            app:destination="@id/paymentMethodTransferFragment2" />
+        <action
+            android:id="@+id/action_paymentMethodFragment2_to_paymentMethodCheckFragment2"
+            app:destination="@id/paymentMethodCheckFragment2" />
+        <argument
+            android:name="typePayment"
+            app:argType="integer" />
+        <argument
+            android:name="idSuscripcion"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="again"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="againTotal"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentMethodCardFragment2"
+        android:name="com.app.subastas.view.fragments.PaymentMethodCardFragment"
+        android:label="PaymentMethodCardFragment"
+        tools:layout="@layout/payment_method_card_fragment">
+        <action
+            android:id="@+id/action_paymentMethodCardFragment2_to_myCardsFragment2"
+            app:destination="@id/myCardsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentMethodTransferFragment2"
+        android:name="com.app.subastas.view.fragments.PaymentMethodTransferFragment"
+        android:label="PaymentMethodTransferFragment"
+        tools:layout="@layout/payment_method_transfer_fragment">
+        <action
+            android:id="@+id/action_paymentMethodTransferFragment2_to_dialogPaymentConfirm2"
+            app:destination="@id/dialogPaymentConfirm2" />
+        <argument
+            android:name="idLote"/>
+        <argument
+            android:name="precio"/>
+        <argument
+            android:name="porc"
+            app:argType="long"/>
+        <argument
+            android:name="typePayment"
+            app:argType="integer" />
+        <argument
+            android:name="idSuscripcion"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="again"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="againTotal"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentMethodCheckFragment2"
+        android:name="com.app.subastas.view.fragments.PaymentMethodCheckFragment"
+        android:label="PaymentMethodCheckFragment"
+        tools:layout="@layout/payment_method_check_fragment">
+        <argument
+            android:name="idLote"/>
+        <argument
+            android:name="precio"/>
+        <argument
+            android:name="porc"
+            app:argType="long"/>
+        <action
+            android:id="@+id/action_paymentMethodCheckFragment2_to_dialogPaymentConfirm2"
+            app:destination="@id/dialogPaymentConfirm2" />
+        <argument
+            android:name="typePayment"
+            app:argType="integer" />
+        <argument
+            android:name="idSuscripcion"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_paymentMethodCheckFragment2_to_dialogVoucher"
+            app:destination="@id/dialogVoucher" />
+        <argument
+            android:name="again"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="againTotal"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogPaymentConfirm2"
+        android:name="com.app.subastas.view.fragments.dialog.DialogPaymentConfirm"
+        android:label="DialogPaymentConfirm"
+        tools:layout="@layout/dialog_payment_confirm">
+        <action
+            android:id="@+id/action_dialogPaymentConfirm2_to_receiptFragment2"
+            app:destination="@id/receiptFragment2" />
+        <argument
+            android:name="type" />
+        <argument
+            android:name="typePayment"
+            app:argType="integer" />
+        <argument
+            android:name="porcent"
+            app:argType="integer" />
+        <argument
+            android:name="checkDetail"
+            app:argType="com.app.subastas.data.entity.model.payment.PayCheckDetail"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </dialog>
+    <fragment
+        android:id="@+id/receiptFragment2"
+        android:name="com.app.subastas.view.fragments.ReceiptFragment"
+        android:label="ReceiptFragment"
+        tools:layout="@layout/receipt_fragment">
+        <action
+            android:id="@+id/action_receiptFragment2_to_inscriptionsFragment"
+            app:destination="@id/inscriptionsFragment" />
+        <argument
+            android:name="type"/>
+        <argument
+            android:name="porcent"
+            app:argType="integer" />
+        <argument
+            android:name="checkDetail"
+            app:argType="com.app.subastas.data.entity.model.payment.PayCheckDetail"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/myCardsFragment2"
+        android:name="com.app.subastas.view.fragments.MyCardsFragment"
+        android:label="MyCardsFragment"
+        tools:layout="@layout/my_cards_fragment">
+        <action
+            android:id="@+id/action_myCardsFragment2_to_payLastStepFragment2"
+            app:destination="@id/payLastStepFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/payLastStepFragment2"
+        android:name="com.app.subastas.view.fragments.PayLastStepFragment"
+        android:label="PayLastStepFragment"
+        tools:layout="@layout/pay_last_step_fragment">
+        <action
+            android:id="@+id/action_payLastStepFragment2_to_dialogPaymentConfirm2"
+            app:destination="@id/dialogPaymentConfirm2" />
+    </fragment>
+    <fragment
+        android:id="@+id/registeredLotsFragment"
+        android:name="com.app.subastas.view.fragments.RegisteredLotsFragment"
+        android:label="RegisteredLotsFragment"
+        tools:layout="@layout/registered_lots_fragment"/>
+    <fragment
+        android:id="@+id/wonLotsFragment"
+        android:name="com.app.subastas.view.fragments.WonLotsFragment"
+        android:label="WonLotsFragment"
+        tools:layout="@layout/won_lots_fragment"/>
+    <fragment
+        android:id="@+id/auctionStartFragment"
+        android:name="com.app.subastas.view.fragments.AuctionStartFragment"
+        android:label="AuctionStartFragment"
+        tools:layout="@layout/auction_start_fragment">
+        <argument
+            android:name="idLote"/>
+        <argument
+            android:name="fechaInicio"/>
+        <argument
+            android:name="fechaFin"/>
+        <argument
+            android:name="serverTime"/>
+    </fragment>
+    <dialog
+        android:id="@+id/dialogConfirmPay"
+        android:name="com.app.subastas.view.fragments.dialog.DialogConfirmPay"
+        android:label="DialogConfirmPay"
+        tools:layout="@layout/dialog_confirm_pay">
+        <argument
+            android:name="price"
+            app:argType="float"/>
+        <argument
+            android:name="idLote"
+            app:argType="integer"/>
+        <action
+            android:id="@+id/action_dialogConfirmPay_to_paymentMethodFragment2"
+            app:destination="@id/paymentMethodFragment2" />
+        <argument
+            android:name="typePayment"
+            app:argType="integer" />
+        <argument
+            android:name="idSuscripcion"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="porc"
+            app:argType="long" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/dialogVoucher"
+        android:name="com.app.subastas.view.fragments.dialog.VoucherDialog"
+        android:label="VoucherDialog"
+        tools:layout="@layout/voucher_dialog">
+        <argument
+            android:name="image"/>
+    </dialog>
+
+</navigation>

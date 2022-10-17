@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_gap">16dp</dimen>
+    <dimen name="button_widht">301dp</dimen>
+    <dimen name="button_text_size">18sp</dimen>
+    <dimen name="button_height">54dp</dimen>
+    <dimen name="medium_gap">32dp</dimen>
+    <dimen name="max_min_gap">40dp</dimen>
+    <dimen name="minimum_gap">8dp</dimen>
+</resources>

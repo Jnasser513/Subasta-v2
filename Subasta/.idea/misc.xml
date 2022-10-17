@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/DEV LATMOBILE/.gradle/caches/transforms-3/3be53081805e94c9d39eeee40515d5de/transformed/jetified-ImageSlideshow-0.1.0/res/drawable/default_selected_dot.xml" value="0.189" />
+        <entry key="..\:/Users/DEV LATMOBILE/.gradle/caches/transforms-3/3be53081805e94c9d39eeee40515d5de/transformed/jetified-ImageSlideshow-0.1.0/res/drawable/default_unselected_dot.xml" value="0.189" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout-v24/change_password_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout-v24/register_juridic_person_fragment.xml" value="0.24682971014492755" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/auction_finish_fragment.xml" value="0.25" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/auction_finish_winning_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/auction_in_progress_fragment.xml" value="0.33" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/auction_start_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/available_lost_fragment.xml" value="0.12" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/data_validation_fragment.xml" value="0.2911931818181818" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/dialog_booking_lots.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/dialog_close_session.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/dialog_confirm_pay.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/dialog_confirm_register.xml" value="0.5" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/dialog_enter_code.xml" value="0.5" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/dialog_leave_auction.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/dialog_lot_detail_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/dialog_payment_confirm.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/enter_email_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/first_add_fragment.xml" value="0.5" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/home_activity.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/home_lotes_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/init_fragment.xml" value="0.33" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/inscriptions_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/item_lotes.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/item_photo.xml" value="0.24166666666666667" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/item_registered_lots.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/item_won_lots.xml" value="0.33" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/my_cards_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/no_internet_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/no_register_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/pay_last_step_fragment.xml" value="0.5" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/payment_method_card_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/payment_method_check_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/payment_method_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/payment_method_transfer_fragment.xml" value="0.24682971014492755" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/receipt_fragment.xml" value="0.25" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/recovery_code_fragment.xml" value="0.5" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/register_juridic_person_fragment.xml" value="0.5" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/register_natural_person_fragment.xml" value="0.33" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/registered_lots_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/second_add_fragment.xml" value="0.5" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/slider_activity.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/spinner_focused.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/spinner_right_aligned.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/splash_activity.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/step_fragment.xml" value="0.5" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/third_add_fragment.xml" value="0.33" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/toast_personalized.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/toast_style.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/voucher_dialog.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subasta Saul/aduana-subasta-andrroid/Subasta/app/src/main/res/layout/won_lots_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/drawable/button_style_primary_color.xml" value="0.114" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/drawable/toast_style.xml" value="0.219" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout-v24/change_password_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout-v24/register_juridic_person_fragment.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout/auction_in_progress_fragment.xml" value="0.25" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout/available_lost_fragment.xml" value="0.1721014492753623" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout/data_validation_fragment.xml" value="0.1" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout/dialog_booking_lots.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout/dialog_close_session.xml" value="0.33" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout/dialog_confirm_pay.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout/dialog_confirm_register.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout/dialog_enter_code.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout/dialog_leave_auction.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout/dialog_lot_detail_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout/dialog_payment_confirm.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout/enter_email_fragment.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout/home_activity.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout/home_lotes_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout/init_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout/inscriptions_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout/item_lotes.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout/item_registered_lots.xml" value="0.33" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout/no_internet_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout/payment_method_check_fragment.xml" value="0.33" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout/payment_method_transfer_fragment.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout/receipt_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout/recovery_code_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout/register_juridic_person_fragment.xml" value="0.33" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout/register_natural_person_fragment.xml" value="0.29144981412639404" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout/registered_lots_fragment.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout/step_fragment.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout/toast_style.xml" value="0.3" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar - copia/Subastas/app/src/main/res/layout/won_lots_fragment.xml" value="0.14221014492753623" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar/Subastas/app/src/main/res/drawable/ic_cancel_blue.xml" value="0.159" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar/Subastas/app/src/main/res/layout-v24/register_juridic_person_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar/Subastas/app/src/main/res/layout/auction_in_progress_fragment.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar/Subastas/app/src/main/res/layout/available_lost_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar/Subastas/app/src/main/res/layout/change_password_fragment.xml" value="0.3148479427549195" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar/Subastas/app/src/main/res/layout/data_validation_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar/Subastas/app/src/main/res/layout/dialog_booking_lots.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar/Subastas/app/src/main/res/layout/dialog_lot_detail_fragment.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar/Subastas/app/src/main/res/layout/first_add_fragment.xml" value="0.16" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar/Subastas/app/src/main/res/layout/home_activity.xml" value="0.1" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar/Subastas/app/src/main/res/layout/home_lotes_fragment.xml" value="0.26406601650412603" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar/Subastas/app/src/main/res/layout/init_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar/Subastas/app/src/main/res/layout/inscriptions_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar/Subastas/app/src/main/res/layout/item_lotes.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar/Subastas/app/src/main/res/layout/pay_last_step_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar/Subastas/app/src/main/res/layout/payment_method_check_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar/Subastas/app/src/main/res/layout/payment_method_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar/Subastas/app/src/main/res/layout/payment_method_transfer_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar/Subastas/app/src/main/res/layout/receipt_fragment.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar/Subastas/app/src/main/res/layout/register_juridic_person_fragment.xml" value="0.33" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar/Subastas/app/src/main/res/layout/register_natural_person_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar/Subastas/app/src/main/res/layout/registered_lots_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar/Subastas/app/src/main/res/layout/second_add_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar/Subastas/app/src/main/res/layout/third_add_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas APK por generar/Subastas/app/src/main/res/layout/won_lots_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/drawable-v24/win_status_style.xml" value="0.1925925925925926" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/drawable/button_style_selected.xml" value="0.2203125" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/drawable/container_lotes_button_style.xml" value="0.2203125" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/drawable/dialog_style.xml" value="0.18" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2203125" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.2203125" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/drawable/loosing_status_style.xml" value="0.1925925925925926" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/drawable/recreipt_payment_container.xml" value="0.2203125" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/drawable/tab_indicator_selected.xml" value="0.2203125" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/drawable/tab_indicator_style.xml" value="0.2203125" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/drawable/tab_indicator_unselected.xml" value="0.2203125" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/drawable/win_status_style.xml" value="0.2203125" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/drawable/winning_status_style.xml" value="0.2203125" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout-v24/payment_method_check_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/auction_in_progress_fragment.xml" value="0.25" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/available_lost_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/data_validation_fragment.xml" value="0.25" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/dialog_booking_lots.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/dialog_close_session.xml" value="0.33" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/dialog_confirm_pay.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/dialog_confirm_register.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/dialog_enter_code.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/dialog_leave_auction.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/dialog_lot_detail_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/dialog_payment_confirm.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/first_add_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/home_activity.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/home_lotes_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/init_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/inscriptions_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/item_lotes.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/item_photo.xml" value="0.14266304347826086" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/item_registered_lots.xml" value="0.25" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/item_won_lots.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/no_register_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/pay_last_step_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/payment_method_check_fragment.xml" value="0.25" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/payment_method_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/payment_method_transfer_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/receipt_fragment.xml" value="0.33" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/register_juridic_person_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/register_natural_person_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/registered_lots_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/second_add_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/step_fragment.xml" value="0.25" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/third_add_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/layout/won_lots_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser) - copia/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2064814814814815" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/auction_circle_style.xml" value="0.2203125" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/background_style.xml" value="0.2169230769230769" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/button_auction_disabled_style.xml" value="0.2203125" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/button_style.xml" value="0.2203125" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/button_style_blue.xml" value="0.2169230769230769" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/button_style_primary_color.xml" value="0.2203125" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/button_style_selected.xml" value="0.2203125" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/container_lotes_button_style.xml" value="0.2203125" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/edit_text_transparent_style.xml" value="0.2203125" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/empty_container_style.xml" value="0.2203125" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/ic_arrow_spinner.xml" value="0.21388888888888888" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/ic_booking.xml" value="0.2169230769230769" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/ic_check.xml" value="0.2169230769230769" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/ic_empty_image.xml" value="0.20185185185185187" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/ic_group_216.xml" value="0.2169230769230769" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/ic_group_225_1.xml" value="0.2169230769230769" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/ic_next.xml" value="0.21666666666666667" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/ic_no_register.xml" value="0.2203125" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/ic_return.xml" value="0.2203125" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/ic_subastas_date.xml" value="0.2169230769230769" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/ic_transfer.xml" value="0.2169230769230769" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/image_container_style.xml" value="0.217" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/input_border_bottom.xml" value="0.2203125" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/light_blue_container_style.xml" value="0.2203125" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/line_black_dotted.xml" value="0.2169230769230769" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/line_white_dotted.xml" value="0.2169230769230769" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/payment_method_container_style.xml" value="0.2169230769230769" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/receipt_container_style.xml" value="0.2169230769230769" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/red_button_style.xml" value="0.2203125" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/spinner_style.xml" value="0.2169230769230769" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/tab_indicator.xml" value="0.21666666666666667" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/tab_indicator_default.xml" value="0.21666666666666667" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/tab_indicator_selected.xml" value="0.21666666666666667" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/tab_indicator_style.xml" value="0.2203125" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/textview_line_bottom.xml" value="0.2203125" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/toast_style.xml" value="0.193" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/transparent_button_style.xml" value="0.2203125" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/transparent_secondary_button_style.xml" value="0.2169230769230769" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/voucher_image_container.xml" value="0.2203125" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/drawable/white_container_style.xml" value="0.2203125" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout-v24/payment_method_transfer_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout-v24/register_juridic_person_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/auction_finish_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/auction_finish_winning_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/auction_in_progress_fragment.xml" value="0.25" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/auction_start_fragment.xml" value="0.25" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/available_lost_fragment.xml" value="0.3048211508553655" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/data_validation_fragment.xml" value="0.22" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/dialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/dialog_booking_lots.xml" value="0.25" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/dialog_confirm_pay.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/dialog_confirm_register.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/dialog_enter_code.xml" value="0.25" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/dialog_leave_auction.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/dialog_lot_detail.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/dialog_lot_detail_fragment.xml" value="0.33" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/dialog_payment_confirm.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/dialog_total_payment_confirm.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/first_add_fragment.xml" value="0.25" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/fragment_progress.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/home_activity.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/home_lotes_activity.xml" value="0.33" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/home_lotes_fragment.xml" value="0.22" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/init_fragment.xml" value="0.25" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/inscriptions_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/item_lotes.xml" value="0.33" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/item_photo.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/item_registered_lots.xml" value="0.3606870229007634" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/item_won_lots.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/my_cards_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/no_register_fragment.xml" value="0.25" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/pay_last_step_fragment.xml" value="0.33" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/payment_method_card_fragment.xml" value="0.33" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/payment_method_check_fragment.xml" value="0.33" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/payment_method_fragment.xml" value="0.25" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/payment_method_transfer_fragment.xml" value="0.25" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/progress.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/receipt_fragment.xml" value="0.3088480801335559" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/register_juridic_person_fragment.xml" value="0.33" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/register_natural_person_fragment.xml" value="0.22" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/registered_lots_fragment.xml" value="0.25" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/second_add_fragment.xml" value="0.25" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/slider.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/slider_activity.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/spinner_focused.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/spinner_right_aligned.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/splash_activity.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/step_fragment.xml" value="0.33" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/third_add_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/toast_personalized.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/voucher_dialog.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/DEV LATMOBILE/Desktop/Subastas(nasser)/app/src/main/res/layout/won_lots_fragment.xml" value="0.20416666666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

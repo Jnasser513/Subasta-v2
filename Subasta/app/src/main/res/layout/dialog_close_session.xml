@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.app.subastas.viewmodel.AuthViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_color"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dialog_close_session_signout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginVertical="20dp"
+            android:fontFamily="@font/museosans_500"
+            android:gravity="start"
+            android:text="Cerrar sesión"
+            android:textColor="@color/secondary_color"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#727272"/>
+
+        <TextView
+            android:id="@+id/dialog_close_session_change_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginVertical="20dp"
+            android:fontFamily="@font/museosans_500"
+            android:gravity="start"
+            android:text="Cambiar contraseña"
+            android:textColor="@color/secondary_color"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.app.subastas.viewmodel.AuthViewModel" />
+    </data>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/payment_method_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_gap"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="@dimen/default_gap"
+                    android:fontFamily="@font/museosans_700"
+                    android:gravity="center"
+                    android:text="¡Ya casi iniciamos la subasta!"
+                    android:textColor="@color/secondary_color"
+                    android:textSize="35sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/payment_method_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_gap"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="@dimen/default_gap"
+                    android:fontFamily="@font/museosans_500"
+                    android:gravity="center"
+                    android:text="¡Mucha suerte!"
+                    android:textColor="@color/secondary_color"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/payment_method_title" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/auction_start_progressbar_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="280dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="40dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/payment_method_description">
+
+                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                        android:id="@+id/circularProgressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cpb_background_progressbar_color="#9497A4"
+                        app:cpb_background_progressbar_width="20dp"
+                        app:cpb_progress_direction="to_right"
+                        app:cpb_progressbar_color="#B1DFAE"
+                        app:cpb_progressbar_width="20dp"
+                        app:cpb_round_border="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/auction_circle_style"
+                        android:layout_margin="25dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                        <TextView
+                            android:id="@+id/auction_start_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$0000"
+                            android:textSize="40sp"
+                            android:textColor="#DDDDDD"
+                            android:fontFamily="@font/museosans_700"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+                        <!--<TextView
+                            android:id="@+id/auction_start_times"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00:00:00:00"
+                            android:textSize="25sp"
+                            android:textColor="#898989"
+                            android:fontFamily="@font/museosans_500"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/auction_start_amount"/>-->
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/auction_start_bet_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:hint=" "
+                    app:hintTextColor="#C5C5C5"
+                    app:layout_constraintEnd_toEndOf="@id/auction_start_progressbar_container"
+                    app:layout_constraintStart_toStartOf="@id/auction_start_progressbar_container"
+                    app:layout_constraintTop_toBottomOf="@id/auction_start_progressbar_container"
+                    app:layout_goneMarginEnd="20dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/auction_start_bet_edit"
+                        android:layout_width="301dp"
+                        android:layout_height="54dp"
+                        android:background="@drawable/edit_text_transparent_style"
+                        android:fontFamily="@font/museosans_500"
+                        android:gravity="center"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:hint="$00000"
+                        android:inputType="textPersonName"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:textColor="@color/secondary_color"
+                        android:textColorHint="#C5C5C5"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/auction_start_action_bet"
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    app:layout_constraintStart_toStartOf="@id/auction_start_bet_layout"
+                    app:layout_constraintEnd_toEndOf="@id/auction_start_bet_layout"
+                    app:layout_constraintTop_toBottomOf="@id/auction_start_bet_layout"
+                    android:background="@drawable/button_auction_disabled_style"
+                    android:layout_marginTop="20dp"
+                    android:clickable="false"
+                    android:textColor="@color/primary_color"
+                    android:focusable="false"
+                    android:textSize="@dimen/button_text_size"
+                    android:text="Pujar"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/museosans_700"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="35dp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+</layout>

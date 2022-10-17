@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="30dp"
+        android:gravity="center"
+        android:background="@drawable/dialog_style">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_card" />
+
+        <TextView
+            android:id="@+id/dialog_confirm_pay_price_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textColor="@color/primary_color"
+            android:textSize="18sp"
+            android:text="@string/dialog_confirm_pay_text" />
+
+        <Button
+            android:id="@+id/dialog_confirm_pay_action_pay"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="Completar Pago"
+            android:textSize="@dimen/button_text_size"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textColor="@color/secondary_color"
+            android:textAllCaps="false"
+            android:fontFamily="@font/museosans_700"
+            android:background="@drawable/button_style_primary_color" />
+
+    </LinearLayout>
+</layout>

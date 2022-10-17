@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.app.subastas.viewmodel.AuthViewModel" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="44dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/primary_color"
+        app:cardCornerRadius="25dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/ic_caution" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:text="¿Está seguro que desea abandonar la subasta?"
+                android:textSize="17sp"
+                android:textColor="@color/secondary_color"
+                android:fontFamily="@font/museosans_500"
+                android:gravity="center" />
+
+            <Button
+                android:id="@+id/dialog_leave_auction_action_leave"
+                android:layout_width="250dp"
+                android:layout_height="54dp"
+                android:background="@drawable/button_style"
+                android:textColor="@color/primary_color"
+                android:textSize="18sp"
+                android:fontFamily="@font/museosans_700"
+                android:text="Abandonar"
+                android:textAllCaps="false"
+                android:layout_marginTop="20dp" />
+
+            <Button
+                android:id="@+id/dialog_leave_auction_action_cancel"
+                android:layout_width="250dp"
+                android:layout_height="54dp"
+                android:background="@drawable/transparent_secondary_button_style"
+                android:textColor="@color/secondary_color"
+                android:textSize="18sp"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/museosans_700"
+                android:text="Cancelar"
+                android:textAllCaps="false"
+                android:layout_marginTop="10dp" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.app.subastas.viewmodel.AuthViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/f2">
+
+            <ImageButton
+                android:id="@+id/register_natural_person_action_return"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="25dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_return"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/register_natural_person_logo"
+                android:layout_width="75dp"
+                android:layout_height="67dp"
+                android:layout_marginTop="51dp"
+                android:src="@drawable/logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/register_natural_person_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/museosans_700"
+                android:gravity="center"
+                android:text="Complete la información"
+                android:textColor="@color/secondary_color"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_natural_person_logo" />
+
+            <TextView
+                android:id="@+id/register_natural_person_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/museosans_500"
+                android:gravity="center"
+                android:lineSpacingExtra="5dp"
+                android:text="La información solicitada es para uso exclusivo de la plataforma"
+                android:textColor="@color/secondary_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_natural_person_title" />
+
+            <TextView
+                android:id="@+id/register_natural_person_name_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/museosans_500"
+                android:text="Nombre"
+                android:textColor="@color/secondary_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_natural_person_description" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/register_natural_person_name_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint=" "
+                app:hintTextColor="#C5C5C5"
+                app:layout_constraintEnd_toEndOf="@id/register_natural_person_name_title"
+                app:layout_constraintStart_toStartOf="@id/register_natural_person_name_title"
+                app:layout_constraintTop_toBottomOf="@id/register_natural_person_name_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/register_natural_person_name_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/edit_text_transparent_style"
+                    android:fontFamily="@font/museosans_500"
+                    android:gravity="center"
+                    android:hint="Escriba su nombre aquí"
+                    android:inputType="textPersonName"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:text="@{viewmodel.nameRegister}"
+                    android:textColor="@color/secondary_color"
+                    android:textColorHint="#C5C5C5"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/register_natural_person_direction_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/museosans_500"
+                android:text="Dirección"
+                android:textColor="@color/secondary_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_natural_person_name_layout" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/register_natural_person_direction_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint=" "
+                app:hintTextColor="#C5C5C5"
+                app:layout_constraintEnd_toEndOf="@id/register_natural_person_direction_title"
+                app:layout_constraintStart_toStartOf="@id/register_natural_person_direction_title"
+                app:layout_constraintTop_toBottomOf="@id/register_natural_person_direction_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/register_natural_person_direction_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/edit_text_transparent_style"
+                    android:fontFamily="@font/museosans_500"
+                    android:gravity="center"
+                    android:hint="Escriba su dirección aquí"
+                    android:inputType="textPersonName"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:text="@{viewmodel.directionRegister}"
+                    android:textColor="@color/secondary_color"
+                    android:textColorHint="#C5C5C5"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/register_natural_person_department_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/museosans_500"
+                android:text="Departamento"
+                android:textColor="@color/secondary_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_natural_person_direction_layout" />
+
+            <LinearLayout
+                android:id="@+id/register_natural_person_department_spinner_linearlayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="@id/register_natural_person_department_title"
+                app:layout_constraintStart_toStartOf="@id/register_natural_person_department_title"
+                app:layout_constraintTop_toBottomOf="@id/register_natural_person_department_title">
+
+                <Spinner
+                    android:id="@+id/register_natural_person_department_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/spinner_style" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="25dp"
+                android:src="@drawable/ic_arrow_spinner"
+                app:layout_constraintBottom_toBottomOf="@id/register_natural_person_department_spinner_linearlayout"
+                app:layout_constraintEnd_toEndOf="@id/register_natural_person_department_spinner_linearlayout"
+                app:layout_constraintTop_toTopOf="@id/register_natural_person_department_spinner_linearlayout" />
+
+            <TextView
+                android:id="@+id/register_natural_person_municipality_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/museosans_500"
+                android:text="Municipio"
+                android:textColor="@color/secondary_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_natural_person_department_spinner_linearlayout" />
+
+            <LinearLayout
+                android:id="@+id/register_natural_person_municipality_spinner_linearlayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="@id/register_natural_person_municipality_title"
+                app:layout_constraintStart_toStartOf="@id/register_natural_person_municipality_title"
+                app:layout_constraintTop_toBottomOf="@id/register_natural_person_municipality_title">
+
+                <Spinner
+                    android:id="@+id/register_natural_person_municipality_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/spinner_style" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="25dp"
+                android:src="@drawable/ic_arrow_spinner"
+                app:layout_constraintBottom_toBottomOf="@id/register_natural_person_municipality_spinner_linearlayout"
+                app:layout_constraintEnd_toEndOf="@id/register_natural_person_municipality_spinner_linearlayout"
+                app:layout_constraintTop_toTopOf="@id/register_natural_person_municipality_spinner_linearlayout" />
+
+            <TextView
+                android:id="@+id/register_natural_person_dui_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/museosans_500"
+                android:text="DUI"
+                android:textColor="@color/secondary_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_natural_person_municipality_spinner_linearlayout" />
+
+            <!--
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/register_natural_person_dui_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint=" "
+                app:hintTextColor="#C5C5C5"
+                app:layout_constraintEnd_toEndOf="@id/register_natural_person_dui_title"
+                app:layout_constraintStart_toStartOf="@id/register_natural_person_dui_title"
+                app:layout_constraintTop_toBottomOf="@id/register_natural_person_dui_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/register_natural_person_dui_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/edit_text_transparent_style"
+                    android:fontFamily="@font/museosans_500"
+                    android:gravity="center"
+                    android:hint="Escribe tu DUI aquí"
+                    android:text="@{viewmodel.duiRegister}"
+                    android:inputType="number"
+                    android:maxLength="9"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:textColor="@color/secondary_color"
+                    android:textColorHint="#C5C5C5"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            -->
+
+            <com.santalu.maskedittext.MaskEditText
+                android:id="@+id/register_natural_person_dui_edit"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginHorizontal="25dp"
+                android:background="@drawable/edit_text_transparent_style"
+                android:fontFamily="@font/museosans_500"
+                android:gravity="center"
+                android:hint="Escriba su DUI aquí"
+                android:inputType="number"
+                android:maxLength="9"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:layout_marginTop="10dp"
+                android:text="@{viewmodel.duiRegister}"
+                android:textColor="@color/secondary_color"
+                android:textColorHint="#C5C5C5"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/register_natural_person_dui_title"
+                app:layout_constraintStart_toStartOf="@id/register_natural_person_dui_title"
+                app:layout_constraintTop_toBottomOf="@id/register_natural_person_dui_title"
+                app:met_mask="########-#" />
+
+            <TextView
+                android:id="@+id/register_natural_person_nit_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/museosans_500"
+                android:text="NIT"
+                android:textColor="@color/secondary_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_natural_person_dui_edit" />
+
+            <com.santalu.maskedittext.MaskEditText
+                android:id="@+id/register_natural_person_nit_edit"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginHorizontal="25dp"
+                android:background="@drawable/edit_text_transparent_style"
+                android:fontFamily="@font/museosans_500"
+                android:gravity="center"
+                android:hint="Escriba su NIT aquí"
+                android:layout_marginTop="10dp"
+                android:inputType="number"
+                android:maxLength="14"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:text="@{viewmodel.nitRegister}"
+                android:textColor="@color/secondary_color"
+                android:textColorHint="#C5C5C5"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/register_natural_person_nit_title"
+                app:layout_constraintStart_toStartOf="@id/register_natural_person_nit_title"
+                app:layout_constraintTop_toBottomOf="@id/register_natural_person_nit_title"
+                app:met_mask="####-######-###-#" />
+
+            <TextView
+                android:id="@+id/register_natural_person_telephone_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/museosans_500"
+                android:text="Teléfono"
+                android:textColor="@color/secondary_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_natural_person_nit_edit" />
+
+            <com.santalu.maskedittext.MaskEditText
+                android:id="@+id/register_natural_person_telephone_edit"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_text_transparent_style"
+                android:fontFamily="@font/museosans_500"
+                android:gravity="center"
+                android:hint="Escriba su teléfono aquí"
+                android:inputType="number"
+                android:layout_marginHorizontal="25dp"
+                app:met_mask="####-####"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:text="@{viewmodel.phoneRegister}"
+                android:textColor="@color/secondary_color"
+                android:textColorHint="#C5C5C5"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/register_natural_person_telephone_title"
+                app:layout_constraintStart_toStartOf="@id/register_natural_person_telephone_title"
+                app:layout_constraintTop_toBottomOf="@id/register_natural_person_telephone_title" />
+
+            <TextView
+                android:id="@+id/register_natural_person_email_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/museosans_500"
+                android:text="Correo Electrónico"
+                android:textColor="@color/secondary_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_natural_person_telephone_edit" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/register_natural_person_email_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint=" "
+                app:hintTextColor="#C5C5C5"
+                app:layout_constraintEnd_toEndOf="@id/register_natural_person_email_title"
+                app:layout_constraintStart_toStartOf="@id/register_natural_person_email_title"
+                app:layout_constraintTop_toBottomOf="@id/register_natural_person_email_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/register_natural_person_email_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/edit_text_transparent_style"
+                    android:fontFamily="@font/museosans_500"
+                    android:gravity="center"
+                    android:hint="Escriba su correo aquí"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:text="@{viewmodel.emailRegister}"
+                    android:textColor="@color/secondary_color"
+                    android:textColorHint="#C5C5C5"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/register_natural_person_password_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/museosans_500"
+                android:text="Contraseña"
+                android:textColor="@color/secondary_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_natural_person_email_layout" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/register_natural_person_password_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint=" "
+                app:hintTextColor="#C5C5C5"
+                app:layout_constraintEnd_toEndOf="@id/register_natural_person_password_title"
+                app:layout_constraintStart_toStartOf="@id/register_natural_person_password_title"
+                app:layout_constraintTop_toBottomOf="@id/register_natural_person_password_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/register_natural_person_password_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/edit_text_transparent_style"
+                    android:fontFamily="@font/museosans_500"
+                    android:gravity="center"
+                    android:hint="Escriba su contraseña aquí"
+                    android:inputType="textPassword"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:text="@{viewmodel.passwordRegister}"
+                    android:textColor="@color/secondary_color"
+                    android:textColorHint="#C5C5C5"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/register_natural_person_repeat_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/museosans_500"
+                android:text="Repetir Contraseña"
+                android:textColor="@color/secondary_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_natural_person_password_layout" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/register_natural_person_repeat_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint=" "
+                app:hintTextColor="#C5C5C5"
+                app:layout_constraintEnd_toEndOf="@id/register_natural_person_repeat_title"
+                app:layout_constraintStart_toStartOf="@id/register_natural_person_repeat_title"
+                app:layout_constraintTop_toBottomOf="@id/register_natural_person_repeat_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/register_natural_person_repeat_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/edit_text_transparent_style"
+                    android:fontFamily="@font/museosans_500"
+                    android:gravity="center"
+                    android:hint="Repita su contraseña"
+                    android:inputType="textPassword"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:textColor="@color/secondary_color"
+                    android:textColorHint="#C5C5C5"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/register_natural_person_footer_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_gap"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/default_gap"
+                android:fontFamily="@font/museosans_700"
+                android:gravity="center"
+                android:text="*Necesita completar todos los campos para continuar con el registro"
+                android:textColor="@color/secondary_color"
+                android:textSize="16sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/register_natural_person_repeat_layout"
+                app:layout_constraintStart_toStartOf="@id/register_natural_person_repeat_layout"
+                app:layout_constraintTop_toBottomOf="@id/register_natural_person_repeat_layout" />
+
+            <Button
+                android:id="@+id/register_natural_person_action_start"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="35dp"
+                android:background="@drawable/button_style"
+                android:fontFamily="@font/museosans_700"
+                android:text="Empezar"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_color"
+                android:textSize="@dimen/button_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/register_natural_person_email_layout"
+                app:layout_constraintStart_toStartOf="@id/register_natural_person_email_layout"
+                app:layout_constraintTop_toBottomOf="@id/register_natural_person_footer_text" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/register_natural_person_progressbar"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:elevation="@dimen/default_gap"
+                android:indeterminate="true"
+                android:visibility="gone"
+                app:indicatorColor="@color/primary_color"
+                app:layout_constraintBottom_toBottomOf="@id/register_natural_person_action_start"
+                app:layout_constraintEnd_toEndOf="@id/register_natural_person_action_start"
+                app:layout_constraintStart_toStartOf="@id/register_natural_person_action_start"
+                app:layout_constraintTop_toTopOf="@id/register_natural_person_action_start"
+                app:trackColor="@color/secondary_color"
+                app:trackThickness="4dp" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/register_natural_person_department_progressbar"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:elevation="@dimen/default_gap"
+                android:indeterminate="true"
+                android:visibility="gone"
+                app:indicatorColor="@color/primary_color"
+                app:layout_constraintBottom_toBottomOf="@id/register_natural_person_department_spinner_linearlayout"
+                app:layout_constraintEnd_toEndOf="@id/register_natural_person_department_spinner_linearlayout"
+                app:layout_constraintStart_toStartOf="@id/register_natural_person_department_spinner_linearlayout"
+                app:layout_constraintTop_toTopOf="@id/register_natural_person_department_spinner_linearlayout"
+                app:trackColor="@color/secondary_color"
+                app:trackThickness="3dp" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/register_natural_person_municipality_progressbar"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:elevation="@dimen/default_gap"
+                android:indeterminate="true"
+                android:visibility="gone"
+                app:indicatorColor="@color/primary_color"
+                app:layout_constraintBottom_toBottomOf="@id/register_natural_person_municipality_spinner_linearlayout"
+                app:layout_constraintEnd_toEndOf="@id/register_natural_person_municipality_spinner_linearlayout"
+                app:layout_constraintStart_toStartOf="@id/register_natural_person_municipality_spinner_linearlayout"
+                app:layout_constraintTop_toTopOf="@id/register_natural_person_municipality_spinner_linearlayout"
+                app:trackColor="@color/secondary_color"
+                app:trackThickness="3dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

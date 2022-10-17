@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.app.subastas.viewmodel.AuthViewModel" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="44dp"
+        android:backgroundTint="@color/secondary_color"
+        app:cardCornerRadius="25dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/dialog_enter_code_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="56dp"
+                android:fontFamily="@font/museosans_500"
+                android:gravity="center"
+                android:text="Ingrese el código enviado a su correo"
+                android:textColor="@color/primary_color"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/dialog_enter_code_first"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/input_border_bottom"
+                android:ems="10"
+                android:inputType="number"
+                android:maxLength="1"
+                android:minHeight="8dp"
+                android:text="@{viewmodel.firstCode}"
+                android:textAlignment="center"
+                android:textColor="@color/primary_color"
+                app:layout_constraintBottom_toBottomOf="@id/dialog_enter_code_second"
+                app:layout_constraintEnd_toStartOf="@id/dialog_enter_code_second"
+                app:layout_constraintTop_toTopOf="@id/dialog_enter_code_second" />
+
+            <EditText
+                android:id="@+id/dialog_enter_code_second"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/input_border_bottom"
+                android:inputType="number"
+                android:maxLength="1"
+                android:minHeight="8dp"
+                android:text="@{viewmodel.secondCode}"
+                android:textAlignment="center"
+                android:textColor="@color/primary_color"
+                app:layout_constraintBottom_toBottomOf="@id/dialog_enter_code_third"
+                app:layout_constraintEnd_toStartOf="@id/dialog_enter_code_third"
+                app:layout_constraintTop_toTopOf="@id/dialog_enter_code_third" />
+
+            <EditText
+                android:id="@+id/dialog_enter_code_third"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/input_border_bottom"
+                android:ems="10"
+                android:inputType="number"
+                android:maxLength="1"
+                android:minHeight="8dp"
+                android:text="@{viewmodel.thirdCode}"
+                android:textAlignment="center"
+                android:textColor="@color/primary_color"
+                app:layout_constraintEnd_toEndOf="@id/dialog_enter_code_title"
+                app:layout_constraintStart_toStartOf="@id/dialog_enter_code_title"
+                app:layout_constraintTop_toBottomOf="@id/dialog_enter_code_title" />
+
+            <EditText
+                android:id="@+id/dialog_enter_code_four"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:background="@drawable/input_border_bottom"
+                android:inputType="number"
+                android:maxLength="1"
+                android:minHeight="8dp"
+                android:text="@{viewmodel.fourCode}"
+                android:textAlignment="center"
+                android:textColor="@color/primary_color"
+                app:layout_constraintBottom_toBottomOf="@id/dialog_enter_code_third"
+                app:layout_constraintStart_toEndOf="@id/dialog_enter_code_third"
+                app:layout_constraintTop_toTopOf="@id/dialog_enter_code_third" />
+
+            <EditText
+                android:id="@+id/dialog_enter_code_five"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:background="@drawable/input_border_bottom"
+                android:ems="10"
+                android:inputType="number"
+                android:maxLength="1"
+                android:minHeight="8dp"
+                android:text="@{viewmodel.fiveCode}"
+                android:textAlignment="center"
+                android:textColor="@color/primary_color"
+                app:layout_constraintBottom_toBottomOf="@id/dialog_enter_code_four"
+                app:layout_constraintStart_toEndOf="@id/dialog_enter_code_four"
+                app:layout_constraintTop_toTopOf="@id/dialog_enter_code_four" />
+
+            <Button
+                android:id="@+id/dialog_enter_code_action_start"
+                android:layout_width="0dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="-30dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="-30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/button_style_primary_color"
+                android:fontFamily="@font/museosans_700"
+                android:text="Ingresar"
+                android:textAllCaps="false"
+                android:textColor="@color/secondary_color"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/dialog_enter_code_title"
+                app:layout_constraintStart_toStartOf="@id/dialog_enter_code_title"
+                app:layout_constraintTop_toBottomOf="@id/dialog_enter_code_third" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/dialog_enter_code_progressBar"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:elevation="@dimen/default_gap"
+                android:indeterminate="true"
+                android:visibility="gone"
+                app:indicatorColor="@color/primary_color"
+                app:layout_constraintStart_toStartOf="@id/dialog_enter_code_action_start"
+                app:layout_constraintEnd_toEndOf="@id/dialog_enter_code_action_start"
+                app:layout_constraintTop_toTopOf="@id/dialog_enter_code_action_start"
+                app:layout_constraintBottom_toBottomOf="@id/dialog_enter_code_action_start"
+                app:trackColor="@color/secondary_color"
+                app:trackThickness="4dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

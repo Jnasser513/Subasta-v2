@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Subastas v1.2</string>
+    <string name="logo">logo subastas</string>
+    <string name="init_logo_description">Descripcion del logo</string>
+    <string name="description_init_subtitle">Subtitulo</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="formatted_time">%02dd:%02dh:%02dm:%02ds</string>
+    <string name="last_bet_text">$%s</string>
+    <string name="dialog_lot_detail_price">Valor: %02d</string>
+    <string name="dialog_lot_detail_name">Nombre: %s</string>
+    <string name="dialog_lot_detail_weight">Peso: %s</string>
+    <string name="dialog_lot_detail_size">Medida: %s</string>
+    <string name="dialog_lot_detail_date">Fecha: %s</string>
+    <string name="dialog_lot_detail_hour">Hora: %s</string>
+    <string name="item_registered_lots_price">$%s</string>
+    <string name="dialog_confirm_pay_text">El monto pendiente a cancelar\n es: $%s</string>
+    <string name="dialog_booking_lots_text">Para inscribirse debe hacer una reserva del %d%% del costo total del lote</string>
+    <string name="item_lotes_price_text">$%s</string>
+    <string name="receipt_percentage">-%d%%</string>
+    <string name="auction_in_progress_button_text">+ ($%d) Pujar</string>
+    <string name="toast_text">%s</string>
+    <string name="receipt_cancel">$%s</string>
+    <string name="receipt_por_pagar">$%s</string>
+    <string name="receipt_porcentaje">$%s</string>
+    <string name="receipt_price">$%s</string>
+    <string name="payment_method_transfer_porc">Reservar el lote con un %s%%</string>
+</resources>

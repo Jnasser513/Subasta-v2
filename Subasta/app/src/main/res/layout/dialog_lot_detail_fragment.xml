@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.app.subastas.viewmodel.AuthViewModel" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="44dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/secondary_color"
+        app:cardCornerRadius="25dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/dialog_lot_detail_action_cancel"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_cancel_blue"/>
+
+            <TextView
+                android:id="@+id/dialog_detail_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_gap"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="@dimen/default_gap"
+                android:fontFamily="@font/museosans_700"
+                android:gravity="center"
+                tools:text="Producto no perecedero"
+                android:textColor="@color/primary_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/dialog_lot_detail_image_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dialog_detail_title">
+
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:id="@+id/dialog_lot_detail_image"
+                    android:layout_width="180dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="20dp"
+                    app:iss_period="1000"
+                    app:iss_corner_radius="10"
+                    app:iss_auto_cycle="true"
+                    app:iss_delay="1000"
+                    app:iss_selected_dot="@drawable/default_selected_dot"
+                    app:iss_unselected_dot="@drawable/default_unselected_dot"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageButton
+                android:id="@+id/dialog_lot_detail_action_previous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_previous"
+                app:layout_constraintBottom_toBottomOf="@id/dialog_lot_detail_image_container"
+                app:layout_constraintEnd_toStartOf="@id/dialog_lot_detail_image_container"
+                app:layout_constraintTop_toTopOf="@id/dialog_lot_detail_image_container" />
+
+            <ImageButton
+                android:id="@+id/dialog_lot_detail_action_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_next"
+                app:layout_constraintBottom_toBottomOf="@id/dialog_lot_detail_image_container"
+                app:layout_constraintStart_toEndOf="@id/dialog_lot_detail_image_container"
+                app:layout_constraintTop_toTopOf="@id/dialog_lot_detail_image_container" />
+
+            <TextView
+                android:id="@+id/dialog_lot_detail_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_gap"
+                android:layout_marginTop="@dimen/default_gap"
+                android:layout_marginEnd="@dimen/default_gap"
+                android:gravity="center"
+                android:text="@string/dialog_lot_detail_price"
+                android:textColor="@color/primary_color"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dialog_lot_detail_image_container" />
+
+            <LinearLayout
+                android:id="@+id/dialog_lot_detail_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_gap"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="@dimen/default_gap"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dialog_lot_detail_price">
+
+                <TextView
+                    android:id="@+id/dialog_lot_detail_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/museosans_500"
+                    android:text="@string/dialog_lot_detail_name"
+                    android:ellipsize="end"
+                    android:ems="3"
+                    android:maxLines="1"
+                    android:textColor="@color/primary_color"
+                    android:textSize="16sp" />
+
+                <View
+                    android:id="@+id/divider1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@color/primary_color" />
+
+                <TextView
+                    android:id="@+id/dialog_lot_detail_weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/museosans_500"
+                    android:text="@string/dialog_lot_detail_weight"
+                    android:textColor="@color/primary_color"
+                    android:textSize="16sp" />
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@color/primary_color" />
+
+                <TextView
+                    android:id="@+id/dialog_lot_detail_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/museosans_500"
+                    android:text="@string/dialog_lot_detail_size"
+                    android:textColor="@color/primary_color"
+                    android:textSize="16sp" />
+
+                <View
+                    android:id="@+id/divider3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@color/primary_color" />
+
+                <TextView
+                    android:id="@+id/dialog_lot_detail_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/museosans_500"
+                    android:text="@string/dialog_lot_detail_date"
+                    android:textColor="@color/primary_color"
+                    android:textSize="16sp" />
+
+                <View
+                    android:id="@+id/divider4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@color/primary_color" />
+
+                <TextView
+                    android:id="@+id/dialog_lot_detail_hour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/museosans_500"
+                    android:text="@string/dialog_lot_detail_hour"
+                    android:textColor="@color/primary_color"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/dialo_lot_detail_action_booking"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="35dp"
+                android:background="@drawable/button_style_primary_color"
+                android:fontFamily="@font/museosans_700"
+                android:text="Reservar"
+                android:textAllCaps="false"
+                android:textColor="@color/secondary_color"
+                android:textSize="@dimen/button_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dialog_lot_detail_container" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

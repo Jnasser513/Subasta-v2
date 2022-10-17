@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.app.subastas.viewmodel.AuthViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_style">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="22dp"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/change_password_action_return"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_return"
+                android:background="@android:color/transparent"/>
+
+            <ImageView
+                android:id="@+id/img_login"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:contentDescription="@string/logo"
+                android:src="@drawable/logo"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/txt_title_p2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="22dp"
+                android:contentDescription="@string/init_logo_description"
+                android:fontFamily="@font/museosans_700"
+                android:text="¿Olvidó su contraseña?"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/txt_subtitle_p2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20sp"
+                android:layout_marginEnd="20dp"
+                android:contentDescription="@string/description_init_subtitle"
+                android:fontFamily="@font/museosans_500"
+                android:text="Escriba su correo y le enviaremos un código."
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="17sp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/change_password_email_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint=" "
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:hintTextColor="#C5C5C5">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/change_password_email_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/edit_text_transparent_style"
+                    android:fontFamily="@font/museosans_500"
+                    android:gravity="center"
+                    android:hint="Escriba su correo"
+                    android:text="@{viewmodel.emailLogin}"
+                    android:inputType="textPersonName"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:textColor="@color/secondary_color"
+                    android:textColorHint="#C5C5C5"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/change_password_action_change"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_style"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:fontFamily="@font/museosans_700"
+                    android:text="Enviar"
+                    android:textAllCaps="false"
+                    android:textColor="@color/primary_color"
+                    android:textSize="@dimen/button_text_size"/>
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/enter_email_progressBar"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:elevation="@dimen/default_gap"
+                    android:indeterminate="true"
+                    android:visibility="gone"
+                    app:indicatorColor="@color/primary_color"
+                    app:trackColor="@android:color/transparent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:trackThickness="4dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

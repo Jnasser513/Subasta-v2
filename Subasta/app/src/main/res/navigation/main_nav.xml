@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeLotesFragment">
+
+    <fragment
+        android:id="@+id/auctionInProgressFragment"
+        android:name="com.app.subastas.view.fragments.AuctionInProgressFragment"
+        android:label="AuctionInProgressFragment"
+        tools:layout="@layout/auction_in_progress_fragment">
+        <action
+            android:id="@+id/action_auctionInProgressFragment_to_dialogLeaveAuction"
+            app:destination="@id/dialogLeaveAuction" />
+        <argument
+            android:name="idLote"/>
+        <action
+            android:id="@+id/action_auctionInProgressFragment_to_auctionFinishWinningFragment"
+            app:destination="@id/auctionFinishWinningFragment" />
+        <action
+            android:id="@+id/action_auctionInProgressFragment_to_auctionFinishFragment2"
+            app:destination="@id/auctionFinishFragment2" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogLeaveAuction"
+        android:name="com.app.subastas.view.fragments.dialog.DialogLeaveAuction"
+        android:label="DialogLeaveAuction"
+        tools:layout="@layout/dialog_leave_auction"/>
+    <fragment
+        android:id="@+id/homeLotesFragment"
+        android:name="com.app.subastas.view.fragments.HomeLotesFragment"
+        android:label="HomeLotesFragment"
+        tools:layout="@layout/home_lotes_fragment">
+        <argument
+            android:name="type"
+            app:nullable="true"/>
+        <action
+            android:id="@+id/action_homeLotesFragment_to_dialogCloseSession"
+            app:destination="@id/dialogCloseSession" />
+        <action
+            android:id="@+id/action_homeLotesFragment_to_auctionInProgressFragment"
+            app:destination="@id/auctionInProgressFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/auctionFinishFragment2"
+        android:name="com.app.subastas.view.fragments.AuctionFinishFragment"
+        android:label="AuctionFinishFragment"
+        tools:layout="@layout/auction_finish_fragment"/>
+    <fragment
+        android:id="@+id/auctionFinishWinningFragment"
+        android:name="com.app.subastas.view.fragments.AuctionFinishWinningFragment"
+        android:label="AuctionFinishWinningFragment"
+        tools:layout="@layout/auction_finish_winning_fragment"/>
+    <dialog
+        android:id="@+id/dialogCloseSession"
+        android:name="com.app.subastas.view.fragments.dialog.DialogCloseSession"
+        android:label="DialogCloseSession"
+        tools:layout="@layout/dialog_close_session">
+        <action
+            android:id="@+id/action_dialogCloseSession_to_changePasswordFragment2"
+            app:destination="@id/changePasswordFragment2" />
+    </dialog>
+    <fragment
+        android:id="@+id/changePasswordFragment2"
+        android:name="com.app.subastas.view.fragments.change_password.ChangePasswordFragment"
+        android:label="ChangePasswordFragment"
+        tools:layout="@layout/change_password_fragment">
+        <argument
+            android:name="inside"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="code"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+</navigation>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.app.subastas.viewmodel.LotViewModel" />
+    </data>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent">
+
+            <TextView
+                android:id="@+id/available_lost_fragment_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_gap"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="@dimen/default_gap"
+                android:fontFamily="@font/museosans_700"
+                android:gravity="center"
+                android:text="Lotes disponibles"
+                android:textColor="@color/secondary_color"
+                android:textSize="35sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/available_lots_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/max_min_gap"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/max_min_gap"
+                android:fontFamily="@font/museosans_500"
+                android:gravity="center"
+                android:text="Puede participar en cualquier subasta disponible."
+                android:textColor="@color/secondary_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/available_lost_fragment_title" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/available_lots_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/available_lots_description"
+                tools:listitem="@layout/item_lotes" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/available_lots_progressBar"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:elevation="@dimen/default_gap"
+                android:indeterminate="true"
+                android:visibility="gone"
+                app:indicatorColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/available_lots_description"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:trackColor="@android:color/transparent"
+                app:trackThickness="4dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/available_lots_empty_list_container"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginStart="@dimen/default_gap"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="@dimen/default_gap"
+                android:background="@drawable/empty_container_style"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/available_lots_description">
+
+                <ImageView
+                    android:id="@+id/available_lots_empty_image"
+                    android:layout_width="80dp"
+                    android:layout_height="65dp"
+                    android:layout_marginBottom="60dp"
+                    android:src="@drawable/ic_empty_image"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/available_lots_empty_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/museosans_300"
+                    android:gravity="center"
+                    android:text="No se encontraron lotes \ndisponibles en este momento"
+                    android:textColor="@color/secondary_color"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/available_lots_empty_image" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</layout>

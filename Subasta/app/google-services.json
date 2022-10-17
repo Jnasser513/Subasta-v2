@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "144332134293",
+    "project_id": "latmobile-subastas-fda60",
+    "storage_bucket": "latmobile-subastas-fda60.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:144332134293:android:f281b0b7f92a7718f0889c",
+        "android_client_info": {
+          "package_name": "com.app.subastas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "144332134293-bvsa1p2anj0r905opu22d3t9k61ocogs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.subastas",
+            "certificate_hash": "9f0895a88fb21523e76e7f5c1351cc24c7b45679"
+          }
+        },
+        {
+          "client_id": "144332134293-fivnkfv2q1ecv2heeco0kspfl5cf4j5l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8eXy4kGXHprvUXMhqJGyomT5WTtRvl5A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "144332134293-fivnkfv2q1ecv2heeco0kspfl5cf4j5l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

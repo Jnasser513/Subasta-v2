@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.app.subastas.viewmodel.AuthViewModel" />
+    </data>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:padding="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/payment_method_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_gap"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="@dimen/default_gap"
+                    android:fontFamily="@font/museosans_700"
+                    android:gravity="center"
+                    android:text="¡Últimos pasos!"
+                    android:textColor="@color/secondary_color"
+                    android:textSize="35sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/payment_method_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_gap"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="@dimen/default_gap"
+                    android:fontFamily="@font/museosans_500"
+                    android:gravity="center"
+                    android:text="Reserva el lote con un 20%"
+                    android:textColor="@color/secondary_color"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/payment_method_title" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/pay_last_step_detail_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_gap"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="@dimen/default_gap"
+                    android:backgroundTint="@color/secondary_color"
+                    app:cardCornerRadius="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/payment_method_description">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/pay_last_step_detail_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="25dp"
+                            android:layout_marginTop="25dp"
+                            android:layout_marginEnd="25dp"
+                            android:fontFamily="@font/museosans_700"
+                            android:gravity="center"
+                            android:textColor="@color/primary_color"
+                            android:textSize="16sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="LOTE 001 - Subasta 01/01/2020" />
+
+                        <ImageView
+                            android:id="@+id/pay_last_step_detail_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_gap"
+                            android:src="@drawable/preview_lot"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/pay_last_step_detail_title" />
+
+                        <LinearLayout
+                            android:id="@+id/pay_last_step_lot_detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="25dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="25dp"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/pay_last_step_detail_image">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/pay_last_step_lot_price_title"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:fontFamily="@font/museosans_500"
+                                    android:text="Precio Lote:"
+                                    android:textColor="#959595"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/pay_last_step_lot_price"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/museosans_700"
+                                    android:gravity="start"
+                                    android:textColor="@color/primary_color"
+                                    android:textSize="16sp"
+                                    tools:text="$0000" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/pay_last_step_lot_discount_title"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:fontFamily="@font/museosans_500"
+                                    android:text="-20%"
+                                    android:textColor="#959595"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/pay_last_step_lot_discount"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/museosans_700"
+                                    android:gravity="start"
+                                    android:textColor="@color/primary_color"
+                                    android:textSize="16sp"
+                                    tools:text="$0000" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/pay_last_step_lot_cancel_price_title"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:fontFamily="@font/museosans_500"
+                                    android:text="Cancelar:"
+                                    android:textColor="#959595"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/pay_last_step_lot_cancel_price"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/museosans_700"
+                                    android:gravity="start"
+                                    android:textColor="@color/primary_color"
+                                    android:textSize="16sp"
+                                    tools:text="$0000" />
+
+                            </LinearLayout>
+                            
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_marginTop="20dp"
+                                android:background="@drawable/line_black_dotted"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="25dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/pay_last_step_lot_total_price_title"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:fontFamily="@font/museosans_700"
+                                    android:text="Por pagar"
+                                    android:textColor="#959595"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/pay_last_step_lot_total_price"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/museosans_700"
+                                    android:gravity="start"
+                                    android:textColor="@color/primary_color"
+                                    android:textSize="16sp"
+                                    tools:text="$0000" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:id="@+id/pay_last_step_change_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    app:layout_constraintStart_toStartOf="@id/pay_last_step_detail_container"
+                    app:layout_constraintEnd_toEndOf="@id/pay_last_step_detail_container"
+                    app:layout_constraintTop_toBottomOf="@id/pay_last_step_detail_container"
+                    android:layout_marginTop="30dp">
+
+                    <ImageButton
+                        android:id="@+id/pay_last_step_action_change_method"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_change"
+                        android:background="@android:color/transparent"/>
+
+                    <TextView
+                        android:id="@+id/pay_last_step_change_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/museosans_700"
+                        android:layout_marginStart="@dimen/default_gap"
+                        android:gravity="center"
+                        android:text="Cambiar método de pago"
+                        android:textColor="@color/secondary_color"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/pay_last_step_action_booking"
+                    android:layout_width="@dimen/button_widht"
+                    android:layout_height="@dimen/button_height"
+                    android:text="Reservar"
+                    android:textColor="@color/primary_color"
+                    android:textSize="@dimen/button_text_size"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/museosans_700"
+                    android:background="@drawable/button_style"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/pay_last_step_change_container"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="25dp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+</layout>

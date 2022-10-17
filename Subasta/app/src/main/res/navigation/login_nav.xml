@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_nav"
+    app:startDestination="@id/initFragment">
+
+    <fragment
+        android:id="@+id/initFragment"
+        android:name="com.app.subastas.view.fragments.InitFragment"
+        android:label="InitFragment"
+        tools:layout="@layout/init_fragment">
+        <action
+            android:id="@+id/action_initFragment_to_dataValidationFragment"
+            app:destination="@id/dataValidationFragment" />
+        <action
+            android:id="@+id/action_initFragment_to_noRegisterFragment"
+            app:destination="@id/noRegisterFragment" />
+        <action
+            android:id="@+id/action_initFragment_to_enterEmailFragment"
+            app:destination="@id/enterEmailFragment" />
+        <action
+            android:id="@+id/action_initFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataValidationFragment"
+        android:name="com.app.subastas.view.fragments.DataValidationFragment"
+        android:label="DataValidationFragment"
+        tools:layout="@layout/data_validation_fragment">
+        <action
+            android:id="@+id/action_dataValidationFragment_to_dialogEnterCode"
+            app:destination="@id/dialogEnterCode" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogEnterCode"
+        android:name="com.app.subastas.view.fragments.dialog.DialogEnterCode"
+        android:label="DialogEnterCode"
+        tools:layout="@layout/dialog_enter_code">
+        <argument
+            android:name="email" />
+        <argument
+            android:name="password" />
+    </dialog>
+    <fragment
+        android:id="@+id/stepFragment"
+        android:name="com.app.subastas.view.fragments.StepFragment"
+        android:label="StepFragment"
+        tools:layout="@layout/step_fragment">
+        <action
+            android:id="@+id/action_stepFragment_to_registerNaturalPersonFragment"
+            app:destination="@id/registerNaturalPersonFragment" />
+        <action
+            android:id="@+id/action_stepFragment_to_registerJuridicPersonFragment"
+            app:destination="@id/registerJuridicPersonFragment" />
+        <argument
+            android:name="type"
+            app:argType="integer"/>
+    </fragment>
+    <fragment
+        android:id="@+id/noRegisterFragment"
+        android:name="com.app.subastas.view.fragments.NoRegisterFragment"
+        android:label="NoRegisterFragment"
+        tools:layout="@layout/no_register_fragment">
+        <action
+            android:id="@+id/action_noRegisterFragment_to_stepFragment"
+            app:destination="@id/stepFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerNaturalPersonFragment"
+        android:name="com.app.subastas.view.fragments.RegisterNaturalPersonFragment"
+        android:label="RegisterNaturalPersonFragment"
+        tools:layout="@layout/register_natural_person_fragment">
+        <action
+            android:id="@+id/action_registerNaturalPersonFragment_to_dialogConfirmRegister"
+            app:destination="@id/dialogConfirmRegister" />
+        <action
+            android:id="@+id/action_registerNaturalPersonFragment_to_stepFragment"
+            app:destination="@id/stepFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogConfirmRegister"
+        android:name="com.app.subastas.view.fragments.dialog.DialogConfirmRegister"
+        android:label="DialogConfirmRegister"
+        tools:layout="@layout/dialog_confirm_register">
+        <action
+            android:id="@+id/action_dialogConfirmRegister_to_dataValidationFragment"
+            app:destination="@id/dataValidationFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/registerJuridicPersonFragment"
+        android:name="com.app.subastas.view.fragments.RegisterJuridicPersonFragment"
+        android:label="RegisterJuridicPersonFragment"
+        tools:layout="@layout/register_juridic_person_fragment">
+        <action
+            android:id="@+id/action_registerJuridicPersonFragment_to_dialogConfirmRegister"
+            app:destination="@id/dialogConfirmRegister" />
+        <action
+            android:id="@+id/action_registerJuridicPersonFragment_to_stepFragment"
+            app:destination="@id/stepFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/enterEmailFragment"
+        android:name="com.app.subastas.view.fragments.change_password.EnterEmailFragment"
+        android:label="EnterEmailFragment"
+        tools:layout="@layout/enter_email_fragment">
+        <action
+            android:id="@+id/action_enterEmailFragment_to_initFragment"
+            app:destination="@id/initFragment" />
+        <action
+            android:id="@+id/action_enterEmailFragment_to_verifyRecoveryCodeFragment"
+            app:destination="@id/verifyRecoveryCodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyRecoveryCodeFragment"
+        android:name="com.app.subastas.view.fragments.change_password.VerifyRecoveryCodeFragment"
+        android:label="VerifyRecoveryCodeFragment"
+        tools:layout="@layout/recovery_code_fragment">
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_verifyRecoveryCodeFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.app.subastas.view.fragments.change_password.ChangePasswordFragment"
+        android:label="ChangePasswordFragment"
+        tools:layout="@layout/change_password_fragment">
+        <argument
+            android:name="code"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_changePasswordFragment_to_initFragment"
+            app:destination="@id/initFragment" />
+        <argument
+            android:name="inside"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:padding="40dp"
+            android:orientation="vertical"
+            android:background="@drawable/background_style"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_no_internet" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sin conexión a internet"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/museosans_700"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No hay conexión a internet. Conéctese a una red e inténtelo nuevamente."
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/museosans_500"/>
+
+            <Button
+                android:id="@+id/action_update"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="25dp"
+                android:text="Actualizar"
+                android:textColor="@color/primary_color"
+                android:textSize="@dimen/button_text_size"
+                android:fontFamily="@font/museosans_700"
+                android:background="@drawable/button_style"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</layout>

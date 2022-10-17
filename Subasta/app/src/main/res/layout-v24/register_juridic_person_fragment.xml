@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.app.subastas.viewmodel.AuthViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/f2">
+
+            <ImageButton
+                android:id="@+id/register_juridic_person_action_return"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="25dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_return"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/register_juridic_person_logo"
+                android:layout_width="75dp"
+                android:layout_height="67dp"
+                android:layout_marginTop="51dp"
+                android:src="@drawable/logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/register_juridic_person_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/museosans_700"
+                android:gravity="center"
+                android:text="Complete la información"
+                android:textColor="@color/secondary_color"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_juridic_person_logo" />
+
+            <TextView
+                android:id="@+id/register_juridic_person_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/museosans_500"
+                android:gravity="center"
+                android:lineSpacingExtra="5dp"
+                android:text="La información solicitada es para uso exclusivo de la plataforma"
+                android:textColor="@color/secondary_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_juridic_person_title" />
+
+            <TextView
+                android:id="@+id/register_juridic_person_name_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/museosans_500"
+                android:text="Nombre empresa"
+                android:textColor="@color/secondary_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_juridic_person_description" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/register_juridic_person_name_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint=" "
+                app:hintTextColor="#C5C5C5"
+                app:layout_constraintEnd_toEndOf="@id/register_juridic_person_name_title"
+                app:layout_constraintStart_toStartOf="@id/register_juridic_person_name_title"
+                app:layout_constraintTop_toBottomOf="@id/register_juridic_person_name_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/register_juridic_person_name_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/edit_text_transparent_style"
+                    android:fontFamily="@font/museosans_500"
+                    android:gravity="center"
+                    android:hint="Nombre de la empresa"
+                    android:inputType="textPersonName"
+                    android:maxLength="150"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:text="@{viewmodel.nameBusinessRegister}"
+                    android:textColor="@color/secondary_color"
+                    android:textColorHint="#C5C5C5"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/register_juridic_person_nit_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/museosans_500"
+                android:text="NIT de empresa"
+                android:textColor="@color/secondary_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_juridic_person_name_layout" />
+
+            <com.santalu.maskedittext.MaskEditText
+                android:id="@+id/register_juridic_person_nit_edit"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edit_text_transparent_style"
+                android:fontFamily="@font/museosans_500"
+                android:gravity="center"
+                android:hint="NIT de empresa"
+                android:inputType="number"
+                android:maxLength="14"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:text="@{viewmodel.nitBusinessRegister}"
+                android:textColor="@color/secondary_color"
+                android:textColorHint="#C5C5C5"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/register_juridic_person_nit_title"
+                app:layout_constraintStart_toStartOf="@id/register_juridic_person_nit_title"
+                app:layout_constraintTop_toBottomOf="@id/register_juridic_person_nit_title"
+                app:met_mask="####-######-###-#" />
+
+            <TextView
+                android:id="@+id/register_juridic_person_name_host_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/museosans_500"
+                android:text="Nombre del representante legal"
+                android:textColor="@color/secondary_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_juridic_person_nit_edit" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/register_juridic_person_name_host_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint=" "
+                app:hintTextColor="#C5C5C5"
+                app:layout_constraintEnd_toEndOf="@id/register_juridic_person_name_host_title"
+                app:layout_constraintStart_toStartOf="@id/register_juridic_person_name_host_title"
+                app:layout_constraintTop_toBottomOf="@id/register_juridic_person_name_host_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/register_juridic_person_name_host_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/edit_text_transparent_style"
+                    android:fontFamily="@font/museosans_500"
+                    android:gravity="center"
+                    android:hint="Escriba el nombre aquí"
+                    android:text="@{viewmodel.nameRegister}"
+                    android:inputType="textPersonName"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:textColor="@color/secondary_color"
+                    android:textColorHint="#C5C5C5"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/register_juridic_person_direction_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/museosans_500"
+                android:text="Dirección de la empresa"
+                android:textColor="@color/secondary_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_juridic_person_name_host_layout" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/register_juridic_person_name_direction_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint=" "
+                app:hintTextColor="#C5C5C5"
+                app:layout_constraintEnd_toEndOf="@id/register_juridic_person_direction_title"
+                app:layout_constraintStart_toStartOf="@id/register_juridic_person_direction_title"
+                app:layout_constraintTop_toBottomOf="@id/register_juridic_person_direction_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/register_juridic_person_direction_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/edit_text_transparent_style"
+                    android:fontFamily="@font/museosans_500"
+                    android:gravity="center"
+                    android:hint="Escriba la dirección aquí"
+                    android:inputType="textPersonName"
+                    android:text="@{viewmodel.directionRegister}"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:textColor="@color/secondary_color"
+                    android:textColorHint="#C5C5C5"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/register_juridic_person_department_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/museosans_500"
+                android:text="Departamento"
+                android:textColor="@color/secondary_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_juridic_person_name_direction_layout" />
+
+            <LinearLayout
+                android:id="@+id/register_juridic_person_department_spinner_linearlayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="@id/register_juridic_person_department_title"
+                app:layout_constraintStart_toStartOf="@id/register_juridic_person_department_title"
+                app:layout_constraintTop_toBottomOf="@id/register_juridic_person_department_title">
+
+                <Spinner
+                    android:id="@+id/register_juridic_person_department_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/spinner_style"
+                    android:pointerIcon="none" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="25dp"
+                android:src="@drawable/ic_arrow_spinner"
+                app:layout_constraintBottom_toBottomOf="@id/register_juridic_person_department_spinner_linearlayout"
+                app:layout_constraintEnd_toEndOf="@id/register_juridic_person_department_spinner_linearlayout"
+                app:layout_constraintTop_toTopOf="@id/register_juridic_person_department_spinner_linearlayout" />
+
+            <TextView
+                android:id="@+id/register_juridic_person_municipality_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/museosans_500"
+                android:text="Municipio"
+                android:textColor="@color/secondary_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_juridic_person_department_spinner_linearlayout" />
+
+            <LinearLayout
+                android:id="@+id/register_juridic_person_municipality_spinner_linearlayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="@id/register_juridic_person_municipality_title"
+                app:layout_constraintStart_toStartOf="@id/register_juridic_person_municipality_title"
+                app:layout_constraintTop_toBottomOf="@id/register_juridic_person_municipality_title">
+
+                <Spinner
+                    android:id="@+id/register_juridic_person_municipality_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/spinner_style"
+                    android:pointerIcon="none" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="25dp"
+                android:src="@drawable/ic_arrow_spinner"
+                app:layout_constraintBottom_toBottomOf="@id/register_juridic_person_municipality_spinner_linearlayout"
+                app:layout_constraintEnd_toEndOf="@id/register_juridic_person_municipality_spinner_linearlayout"
+                app:layout_constraintTop_toTopOf="@id/register_juridic_person_municipality_spinner_linearlayout" />
+
+            <TextView
+                android:id="@+id/register_juridic_person_dui_host_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/museosans_500"
+                android:text="DUI del representante legal"
+                android:textColor="@color/secondary_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_juridic_person_municipality_spinner_linearlayout" />
+
+            <com.santalu.maskedittext.MaskEditText
+                android:id="@+id/register_juridic_person_dui_host_edit"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edit_text_transparent_style"
+                android:fontFamily="@font/museosans_500"
+                android:gravity="center"
+                android:hint="Escriba el DUI aquí"
+                android:inputType="number"
+                android:maxLength="9"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:text="@{viewmodel.duiRegister}"
+                android:textColor="@color/secondary_color"
+                android:textColorHint="#C5C5C5"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/register_juridic_person_dui_host_title"
+                app:layout_constraintStart_toStartOf="@id/register_juridic_person_dui_host_title"
+                app:layout_constraintTop_toBottomOf="@id/register_juridic_person_dui_host_title"
+                app:met_mask="########-#" />
+
+            <TextView
+                android:id="@+id/register_juridic_person_nit_host_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/museosans_500"
+                android:text="NIT del representante legal"
+                android:textColor="@color/secondary_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_juridic_person_dui_host_edit" />
+
+            <com.santalu.maskedittext.MaskEditText
+                android:id="@+id/register_juridic_person_nit_host_edit"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edit_text_transparent_style"
+                android:fontFamily="@font/museosans_500"
+                android:gravity="center"
+                android:hint="Escriba el NIT aquí"
+                android:inputType="number"
+                android:maxLength="14"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:text="@{viewmodel.nitRegister}"
+                android:textColor="@color/secondary_color"
+                android:textColorHint="#C5C5C5"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/register_juridic_person_nit_host_title"
+                app:layout_constraintStart_toStartOf="@id/register_juridic_person_nit_host_title"
+                app:layout_constraintTop_toBottomOf="@id/register_juridic_person_nit_host_title"
+                app:met_mask="####-######-###-#" />
+
+            <TextView
+                android:id="@+id/register_juridic_person_phone_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/museosans_500"
+                android:text="Teléfono del representante legal"
+                android:textColor="@color/secondary_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_juridic_person_nit_host_edit" />
+
+            <com.santalu.maskedittext.MaskEditText
+                android:id="@+id/register_juridic_person_phone_edit"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edit_text_transparent_style"
+                android:fontFamily="@font/museosans_500"
+                android:gravity="center"
+                android:hint="Escriba el teléfono aquí"
+                android:text="@{viewmodel.phoneRegister}"
+                android:inputType="number"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                app:met_mask="####-####"
+                android:textColor="@color/secondary_color"
+                android:textColorHint="#C5C5C5"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/register_juridic_person_phone_title"
+                app:layout_constraintStart_toStartOf="@id/register_juridic_person_phone_title"
+                app:layout_constraintTop_toBottomOf="@id/register_juridic_person_phone_title" />
+
+            <TextView
+                android:id="@+id/register_juridic_person_email_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/museosans_500"
+                android:text="Correo Electrónico"
+                android:textColor="@color/secondary_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_juridic_person_phone_edit" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/register_juridic_person_email_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint=" "
+                app:hintTextColor="#C5C5C5"
+                app:layout_constraintEnd_toEndOf="@id/register_juridic_person_email_title"
+                app:layout_constraintStart_toStartOf="@id/register_juridic_person_email_title"
+                app:layout_constraintTop_toBottomOf="@id/register_juridic_person_email_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/register_juridic_person_email_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/edit_text_transparent_style"
+                    android:fontFamily="@font/museosans_500"
+                    android:gravity="center"
+                    android:hint="Escriba el correo aquí"
+                    android:text="@{viewmodel.emailRegister}"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:textColor="@color/secondary_color"
+                    android:textColorHint="#C5C5C5"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/register_juridic_person_password_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/museosans_500"
+                android:text="Contraseña"
+                android:textColor="@color/secondary_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_juridic_person_email_layout" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/register_juridic_person_password_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint=" "
+                app:hintTextColor="#C5C5C5"
+                app:layout_constraintEnd_toEndOf="@id/register_juridic_person_password_title"
+                app:layout_constraintStart_toStartOf="@id/register_juridic_person_password_title"
+                app:layout_constraintTop_toBottomOf="@id/register_juridic_person_password_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/register_juridic_person_password_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/edit_text_transparent_style"
+                    android:fontFamily="@font/museosans_500"
+                    android:gravity="center"
+                    android:hint="Escriba su contraseña aquí"
+                    android:inputType="textPassword"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:text="@{viewmodel.passwordRegister}"
+                    android:textColor="@color/secondary_color"
+                    android:textColorHint="#C5C5C5"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/register_juridic_person_repeat_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/museosans_500"
+                android:text="Repetir Contraseña"
+                android:textColor="@color/secondary_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_juridic_person_password_layout" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/register_juridic_person_repeat_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint=" "
+                app:hintTextColor="#C5C5C5"
+                app:layout_constraintEnd_toEndOf="@id/register_juridic_person_repeat_title"
+                app:layout_constraintStart_toStartOf="@id/register_juridic_person_repeat_title"
+                app:layout_constraintTop_toBottomOf="@id/register_juridic_person_repeat_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/register_juridic_person_repeat_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/edit_text_transparent_style"
+                    android:fontFamily="@font/museosans_500"
+                    android:gravity="center"
+                    android:hint="Repita su contraseña"
+                    android:inputType="textPassword"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:textColor="@color/secondary_color"
+                    android:textColorHint="#C5C5C5"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/register_juridic_person_footer_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_gap"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/default_gap"
+                android:fontFamily="@font/museosans_700"
+                android:gravity="center"
+                android:text="*Necesita completar todos los campos para continuar con el registro"
+                android:textColor="@color/secondary_color"
+                android:textSize="16sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/register_juridic_person_repeat_layout"
+                app:layout_constraintStart_toStartOf="@id/register_juridic_person_repeat_layout"
+                app:layout_constraintTop_toBottomOf="@id/register_juridic_person_repeat_layout" />
+
+            <Button
+                android:id="@+id/register_juridic_person_action_start"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="35dp"
+                android:background="@drawable/button_style"
+                android:fontFamily="@font/museosans_700"
+                android:text="Empezar"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_color"
+                android:textSize="@dimen/button_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/register_juridic_person_repeat_layout"
+                app:layout_constraintStart_toStartOf="@id/register_juridic_person_repeat_layout"
+                app:layout_constraintTop_toBottomOf="@id/register_juridic_person_footer_text" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/register_juridic_person_progressbar"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:elevation="@dimen/default_gap"
+                android:indeterminate="true"
+                android:visibility="gone"
+                app:indicatorColor="@color/primary_color"
+                app:layout_constraintBottom_toBottomOf="@id/register_juridic_person_action_start"
+                app:layout_constraintEnd_toEndOf="@id/register_juridic_person_action_start"
+                app:layout_constraintStart_toStartOf="@id/register_juridic_person_action_start"
+                app:layout_constraintTop_toTopOf="@id/register_juridic_person_action_start"
+                app:trackColor="@color/secondary_color"
+                app:trackThickness="4dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

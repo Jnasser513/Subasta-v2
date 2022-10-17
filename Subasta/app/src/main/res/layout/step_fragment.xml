@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.app.subastas.viewmodel.AuthViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/f1">
+
+        <ImageButton
+            android:id="@+id/step_action_return"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="25dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_return" />
+
+        <ImageView
+            android:id="@+id/step_logo"
+            android:layout_width="67dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="105dp"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/step_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/max_min_gap"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="@dimen/max_min_gap"
+            android:fontFamily="@font/museosans_700"
+            android:gravity="center"
+            android:text="Siga los pasos a \n continuación"
+            android:textColor="@color/secondary_color"
+            android:textSize="35sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/step_logo" />
+
+        <TextView
+            android:id="@+id/step_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/max_min_gap"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="@dimen/max_min_gap"
+            android:fontFamily="@font/museosans_500"
+            android:gravity="center"
+            android:text="Puedes completar el formulario \nen línea o descargar el PDF y luego \nsubirlo por este medio"
+            android:textColor="@color/secondary_color"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/step_title" />
+
+        <Button
+            android:id="@+id/step_action_form"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginStart="@dimen/max_min_gap"
+            android:layout_marginEnd="@dimen/max_min_gap"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/button_style"
+            android:fontFamily="@font/museosans_700"
+            android:text="Completar formulario"
+            android:textAllCaps="false"
+            android:textColor="@color/primary_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/step_description" />
+
+        <Button
+            android:id="@+id/step_action_download"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/max_min_gap"
+            android:layout_marginEnd="@dimen/max_min_gap"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/transparent_secondary_button_style"
+            android:fontFamily="@font/museosans_700"
+            android:text="Descargar PDF"
+            android:textAllCaps="false"
+            android:textColor="@color/secondary_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/step_action_form" />
+
+        <Button
+            android:id="@+id/step_action_upload"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/max_min_gap"
+            android:layout_marginEnd="@dimen/max_min_gap"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/button_style_blue"
+            android:paddingStart="30dp"
+            android:fontFamily="@font/museosans_700"
+            android:text="Subir PDF"
+            android:textAllCaps="false"
+            android:textColor="@color/secondary_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/step_action_download" />
+
+        <ImageView
+            android:id="@+id/step_upload_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/step_action_upload"
+            app:layout_constraintTop_toTopOf="@id/step_action_upload"
+            android:elevation="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/step_action_upload"
+            app:layout_constraintEnd_toEndOf="@id/step_action_upload"
+            android:layout_marginEnd="100dp"
+            android:src="@drawable/ic_upload"/>
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/step_progressBar"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:elevation="@dimen/default_gap"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:indicatorColor="@color/primary_color"
+            app:layout_constraintStart_toStartOf="@id/step_action_upload"
+            app:layout_constraintEnd_toEndOf="@id/step_action_upload"
+            app:layout_constraintTop_toTopOf="@id/step_action_upload"
+            app:layout_constraintBottom_toBottomOf="@id/step_action_upload"
+            app:trackColor="@color/secondary_color"
+            app:trackThickness="4dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

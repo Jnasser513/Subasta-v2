@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.app.subastas.viewmodel.AuthViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/f3">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/data_validation_action_return"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="25dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_return" />
+
+            <ImageView
+                android:id="@+id/data_validation_logo"
+                android:layout_width="75dp"
+                android:layout_height="67dp"
+                android:layout_marginTop="51dp"
+                android:src="@drawable/logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/data_validation_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/museosans_700"
+                android:gravity="center"
+                android:text="Iniciar sesión"
+                android:textColor="@color/secondary_color"
+                android:textSize="38sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/data_validation_logo" />
+
+            <TextView
+                android:id="@+id/data_validation_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:text="Escriba su correo y le enviaremos el código para ingresar."
+                android:textColor="@color/secondary_color"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/data_validation_title" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/data_validation_email_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint=" "
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                app:hintTextColor="#C5C5C5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/data_validation_description">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/data_validation_email_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/edit_text_transparent_style"
+                    android:fontFamily="@font/museosans_500"
+                    android:gravity="center"
+                    android:hint="Ingresar correo"
+                    android:text="@{viewmodel.emailLogin}"
+                    android:inputType="textPersonName"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:textColor="@color/secondary_color"
+                    android:textColorHint="#C5C5C5"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/data_validation_password_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint=" "
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                app:endIconMode="password_toggle"
+                app:hintTextColor="#C5C5C5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/data_validation_email_input"
+                app:layout_goneMarginEnd="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/data_validation_password_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/edit_text_transparent_style"
+                    android:fontFamily="@font/museosans_500"
+                    android:gravity="center"
+                    android:hint="Ingresar contraseña"
+                    android:text="@{viewmodel.passwordLogin}"
+                    android:inputType="textPassword"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:textColor="@color/secondary_color"
+                    android:textColorHint="#C5C5C5"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/data_validation_action_start"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/button_style"
+                android:fontFamily="@font/museosans_700"
+                android:text="Ingresar"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_color"
+                android:textSize="@dimen/button_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/data_validation_password_input" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/dialog_enter_code_loading"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:elevation="@dimen/default_gap"
+                android:indeterminate="true"
+                android:visibility="gone"
+                app:indicatorColor="@color/primary_color"
+                app:layout_constraintBottom_toBottomOf="@id/data_validation_action_start"
+                app:layout_constraintEnd_toEndOf="@id/data_validation_action_start"
+                app:layout_constraintStart_toStartOf="@id/data_validation_action_start"
+                app:layout_constraintTop_toTopOf="@id/data_validation_action_start"
+                app:trackColor="@color/secondary_color"
+                app:trackThickness="4dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

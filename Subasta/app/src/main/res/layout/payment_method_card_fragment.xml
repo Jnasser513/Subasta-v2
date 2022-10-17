@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.app.subastas.viewmodel.AuthViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/payment_method_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_gap"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="@dimen/default_gap"
+                    android:fontFamily="@font/museosans_700"
+                    android:gravity="center"
+                    android:text="Registrar método \nde pago"
+                    android:textColor="@color/secondary_color"
+                    android:textSize="35sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/payment_method_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_gap"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="@dimen/default_gap"
+                    android:fontFamily="@font/museosans_500"
+                    android:gravity="center"
+                    android:text="Ingresa los datos para registrar el pago con tarjeta de débio o crédito"
+                    android:textColor="@color/secondary_color"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/payment_method_title" />
+
+                <TextView
+                    android:id="@+id/payment_method_card_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="35dp"
+                    android:fontFamily="@font/museosans_500"
+                    android:text="Agregar tarjeta"
+                    android:textColor="@color/secondary_color"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/payment_method_description"/>
+
+                <TextView
+                    android:id="@+id/payment_method_card_number_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="35dp"
+                    android:fontFamily="@font/museosans_500"
+                    android:text="Número de tarjeta"
+                    android:textColor="@color/secondary_color"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@id/payment_method_card_title"
+                    app:layout_constraintStart_toStartOf="@id/payment_method_card_title"
+                    app:layout_constraintTop_toBottomOf="@id/payment_method_card_title" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/payment_method_card_number_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:hint=" "
+                    app:hintTextColor="#C5C5C5"
+                    app:layout_constraintEnd_toEndOf="@id/payment_method_card_number_title"
+                    app:layout_constraintStart_toStartOf="@id/payment_method_card_number_title"
+                    app:layout_constraintTop_toBottomOf="@id/payment_method_card_number_title">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/data_validation_amount_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:background="@drawable/edit_text_transparent_style"
+                        android:fontFamily="@font/museosans_300"
+                        android:gravity="start|center"
+                        android:hint="0000 0000 0000 0000"
+                        android:inputType="textPersonName"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:textColor="@color/secondary_color"
+                        android:textColorHint="@color/secondary_color"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/payment_method_card_date_cvv_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="@id/payment_method_card_number_layout"
+                    app:layout_constraintStart_toStartOf="@id/payment_method_card_number_layout"
+                    app:layout_constraintTop_toBottomOf="@id/payment_method_card_number_layout">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/payment_method_card_date_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:hint=" "
+                        app:hintTextColor="#C5C5C5">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/payment_method_card_date_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="54dp"
+                            android:background="@drawable/edit_text_transparent_style"
+                            android:fontFamily="@font/museosans_300"
+                            android:gravity="start|center"
+                            android:hint="MM/AA"
+                            android:inputType="textPersonName"
+                            android:paddingStart="14dp"
+                            android:paddingEnd="14dp"
+                            android:textColor="@color/secondary_color"
+                            android:textColorHint="@color/secondary_color"
+                            android:textSize="18sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/payment_method_card_cvv_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:hint=" "
+                        app:hintTextColor="#C5C5C5">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/payment_method_card_cvv_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="54dp"
+                            android:background="@drawable/edit_text_transparent_style"
+                            android:fontFamily="@font/museosans_300"
+                            android:gravity="start|center"
+                            android:hint="CVV"
+                            android:inputType="textPersonName"
+                            android:paddingStart="14dp"
+                            android:paddingEnd="14dp"
+                            android:textColor="@color/secondary_color"
+                            android:textColorHint="@color/secondary_color"
+                            android:textSize="18sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/payment_method_card_host_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="35dp"
+                    android:fontFamily="@font/museosans_500"
+                    android:text="Titular de la tarjeta"
+                    android:textColor="@color/secondary_color"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@id/payment_method_card_date_cvv_container"
+                    app:layout_constraintStart_toStartOf="@id/payment_method_card_date_cvv_container"
+                    app:layout_constraintTop_toBottomOf="@id/payment_method_card_date_cvv_container" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/payment_method_card_host_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:hint=" "
+                    app:hintTextColor="#C5C5C5"
+                    app:layout_constraintEnd_toEndOf="@id/payment_method_card_host_title"
+                    app:layout_constraintStart_toStartOf="@id/payment_method_card_host_title"
+                    app:layout_constraintTop_toBottomOf="@id/payment_method_card_host_title">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/payment_method_card_host_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:background="@drawable/edit_text_transparent_style"
+                        android:fontFamily="@font/museosans_300"
+                        android:gravity="start|center"
+                        android:hint="Escribe tu nombre aqui"
+                        android:inputType="textPersonName"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:textColor="@color/secondary_color"
+                        android:textColorHint="@color/secondary_color"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/payment_method_card_action_pay"
+                    android:layout_width="@dimen/button_widht"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/button_style"
+                    android:fontFamily="@font/museosans_700"
+                    android:text="Agregar"
+                    android:textAllCaps="false"
+                    android:textColor="@color/primary_color"
+                    android:textSize="@dimen/button_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/payment_method_card_host_layout" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="40dp"
+                    android:src="@drawable/ic_type_card"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/payment_method_card_action_pay"
+                    app:layout_constraintStart_toStartOf="@id/payment_method_card_action_pay"
+                    app:layout_constraintTop_toBottomOf="@id/payment_method_card_action_pay" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

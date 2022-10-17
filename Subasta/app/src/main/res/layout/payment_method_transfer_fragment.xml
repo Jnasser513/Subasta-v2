@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.app.subastas.viewmodel.LotViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/payment_method_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_gap"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="@dimen/default_gap"
+                android:fontFamily="@font/museosans_700"
+                android:gravity="center"
+                android:text="Transferencia"
+                android:textColor="@color/secondary_color"
+                android:textSize="35sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/payment_method_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_gap"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/default_gap"
+                android:fontFamily="@font/museosans_500"
+                android:gravity="center"
+                android:text="@string/payment_method_transfer_porc"
+                android:textColor="@color/secondary_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/payment_method_title" />
+
+            <TextView
+                android:id="@+id/payment_method_transfer_bank_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="35dp"
+                android:fontFamily="@font/museosans_500"
+                android:text="Banco"
+                android:textColor="@color/secondary_color"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/payment_method_description" />
+
+            <LinearLayout
+                android:id="@+id/payment_method_transfer_bank_spinner_linearlayout"
+                android:layout_width="0dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="@id/payment_method_transfer_bank_title"
+                app:layout_constraintStart_toStartOf="@id/payment_method_transfer_bank_title"
+                app:layout_constraintTop_toBottomOf="@id/payment_method_transfer_bank_title">
+
+                <Spinner
+                    android:id="@+id/verify_supplier_business_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/spinner_style" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/payment_method_transfer_amount_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="35dp"
+                android:fontFamily="@font/museosans_500"
+                android:text="Monto*"
+                android:textColor="@color/secondary_color"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/payment_method_transfer_bank_spinner_linearlayout"
+                app:layout_constraintStart_toStartOf="@id/payment_method_transfer_bank_spinner_linearlayout"
+                app:layout_constraintTop_toBottomOf="@id/payment_method_transfer_bank_spinner_linearlayout" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/payment_method_transfer_amount_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint=" "
+                app:hintTextColor="#C5C5C5"
+                app:layout_constraintEnd_toEndOf="@id/payment_method_transfer_amount_title"
+                app:layout_constraintStart_toStartOf="@id/payment_method_transfer_amount_title"
+                app:layout_constraintTop_toBottomOf="@id/payment_method_transfer_amount_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/data_validation_amount_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/edit_text_transparent_style"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:fontFamily="@font/museosans_300"
+                    android:gravity="start|center"
+                    android:hint="$0.00"
+                    android:inputType="textPersonName"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:text="@{viewmodel.reserva}"
+                    android:textColor="@color/secondary_color"
+                    android:textColorHint="@color/secondary_color"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/payment_method_transfer_date_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="35dp"
+                android:fontFamily="@font/museosans_500"
+                android:text="Fecha*"
+                android:textColor="@color/secondary_color"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/payment_method_transfer_amount_layout"
+                app:layout_constraintStart_toStartOf="@id/payment_method_transfer_amount_layout"
+                app:layout_constraintTop_toBottomOf="@id/payment_method_transfer_amount_layout" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/payment_method_transfer_date_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint=" "
+                app:endIconDrawable="@drawable/ic_subastas_date"
+                app:endIconMode="custom"
+                app:endIconTint="@color/secondary_color"
+                app:hintTextColor="@color/secondary_color"
+                app:layout_constraintEnd_toEndOf="@id/payment_method_transfer_date_title"
+                app:layout_constraintStart_toStartOf="@id/payment_method_transfer_date_title"
+                app:layout_constraintTop_toBottomOf="@id/payment_method_transfer_date_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/data_validation_date_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/edit_text_transparent_style"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:fontFamily="@font/museosans_300"
+                    android:gravity="start|center"
+                    android:hint="aaaa/mm/dd"
+                    android:inputType="textPersonName"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:text="@{viewmodel.fecha}"
+                    android:textColor="@color/secondary_color"
+                    android:textColorHint="@color/secondary_color"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/payment_method_transfer_number_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="35dp"
+                android:fontFamily="@font/museosans_500"
+                android:text="Número de comprobante*"
+                android:textColor="@color/secondary_color"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/payment_method_transfer_date_layout"
+                app:layout_constraintStart_toStartOf="@id/payment_method_transfer_date_layout"
+                app:layout_constraintTop_toBottomOf="@id/payment_method_transfer_date_layout" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/payment_method_transfer_number_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint=" "
+                app:hintTextColor="@color/secondary_color"
+                app:layout_constraintEnd_toEndOf="@id/payment_method_transfer_number_title"
+                app:layout_constraintStart_toStartOf="@id/payment_method_transfer_number_title"
+                app:layout_constraintTop_toBottomOf="@id/payment_method_transfer_number_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/data_validation_number_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/edit_text_transparent_style"
+                    android:fontFamily="@font/museosans_300"
+                    android:gravity="start|center"
+                    android:hint="Número de comprobante"
+                    android:inputType="textPersonName"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:text="@{viewmodel.comprobante}"
+                    android:textColor="@color/secondary_color"
+                    android:textColorHint="@color/secondary_color"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/payment_method_transfer_action_pay"
+                android:layout_width="0dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="35dp"
+                android:background="@drawable/button_style"
+                android:fontFamily="@font/museosans_700"
+                android:text="Realizar Pago"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_color"
+                android:textSize="@dimen/button_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/payment_method_transfer_number_layout"
+                app:layout_constraintStart_toStartOf="@id/payment_method_transfer_number_layout"
+                app:layout_constraintTop_toBottomOf="@id/payment_method_transfer_number_layout" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/payment_method_transfer_progressBar"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:elevation="@dimen/default_gap"
+                android:indeterminate="true"
+                android:visibility="gone"
+                app:indicatorColor="@color/primary_color"
+                app:layout_constraintTop_toTopOf="@id/payment_method_transfer_action_pay"
+                app:layout_constraintStart_toStartOf="@id/payment_method_transfer_action_pay"
+                app:layout_constraintEnd_toEndOf="@id/payment_method_transfer_action_pay"
+                app:layout_constraintBottom_toBottomOf="@id/payment_method_transfer_action_pay"
+                app:trackColor="@android:color/transparent"
+                app:trackThickness="4dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

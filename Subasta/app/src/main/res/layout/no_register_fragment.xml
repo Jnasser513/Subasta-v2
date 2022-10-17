@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.app.subastas.viewmodel.AuthViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary_color">
+
+        <ImageButton
+            android:id="@+id/no_register_action_return"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="25dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_return"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/no_register_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/max_min_gap"
+            android:layout_marginTop="82dp"
+            android:layout_marginEnd="@dimen/max_min_gap"
+            android:fontFamily="@font/museosans_500"
+            android:gravity="center"
+            android:text="Si aún no esta registrado/a complete el siguiente formulario"
+            android:textColor="@color/secondary_color"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/no_register_action_natural_person"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginStart="@dimen/max_min_gap"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="@dimen/max_min_gap"
+            android:background="@drawable/red_button_style"
+            android:fontFamily="@font/museosans_700"
+            android:text="Personas naturales"
+            android:textAllCaps="false"
+            android:textColor="@color/secondary_color"
+            android:textSize="@dimen/button_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/no_register_title" />
+
+        <Button
+            android:id="@+id/no_register_action_juridic_person"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginStart="@dimen/max_min_gap"
+            android:layout_marginTop="@dimen/default_gap"
+            android:layout_marginEnd="@dimen/max_min_gap"
+            android:background="@drawable/transparent_button_style"
+            android:fontFamily="@font/museosans_700"
+            android:text="Persona jurídica"
+            android:textAllCaps="false"
+            android:textColor="@color/secondary_color"
+            android:textSize="@dimen/button_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/no_register_action_natural_person" />
+
+        <ImageView
+            android:id="@+id/no_register_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp"
+            android:src="@drawable/ic_no_register"
+            android:layout_marginStart="@dimen/medium_gap"
+            android:layout_marginEnd="@dimen/medium_gap"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/no_register_action_juridic_person" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

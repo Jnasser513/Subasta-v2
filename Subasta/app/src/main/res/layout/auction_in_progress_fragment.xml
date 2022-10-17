@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.app.subastas.viewmodel.BidViewModel" />
+    </data>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/auction_in_progress_swipeRefresh"
+        android:layout_width="match_parent"
+        android:background="@color/primary_color"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/auction_in_progress_action_return"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_return"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/payment_method_logo"
+                    android:layout_width="75dp"
+                    android:layout_height="67dp"
+                    android:layout_marginTop="51dp"
+                    android:src="@drawable/logo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/payment_method_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_gap"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="@dimen/default_gap"
+                    android:fontFamily="@font/museosans_700"
+                    android:gravity="center"
+                    android:text="Subasta iniciada..."
+                    android:textColor="@color/secondary_color"
+                    android:textSize="35sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/payment_method_logo" />
+
+                <TextView
+                    android:id="@+id/payment_method_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/museosans_500"
+                    android:gravity="center"
+                    android:text="En el espacio que está debajo de la contador se muestra el botón para ofertar."
+                    android:textColor="@color/secondary_color"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/payment_method_title" />
+
+                <TextView
+                    android:id="@+id/auction_in_progress_win_status_text"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/winning_status_style"
+                    android:fontFamily="@font/museosans_700"
+                    android:gravity="center"
+                    android:textColor="@color/primary_color"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@id/payment_method_description"
+                    app:layout_constraintStart_toStartOf="@id/payment_method_description"
+                    app:layout_constraintTop_toBottomOf="@id/payment_method_description"
+                    tools:text="¡VAS GANANDO!" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/auction_start_progressbar_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintEnd_toEndOf="@id/auction_start_bet_layout"
+                    app:layout_constraintStart_toStartOf="@id/auction_start_bet_layout"
+                    app:layout_constraintTop_toBottomOf="@id/auction_in_progress_win_status_text">
+
+                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                        android:id="@+id/circularProgressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cpb_background_progressbar_color="#9497A4"
+                        app:cpb_background_progressbar_width="20dp"
+                        app:cpb_progress_direction="to_right"
+                        app:cpb_progressbar_color="#B1DFAE"
+                        app:cpb_progressbar_width="20dp"
+                        app:cpb_round_border="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="25dp"
+                        android:background="@drawable/auction_circle_style"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/auction_start_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/museosans_700"
+                            android:text="@string/last_bet_text"
+                            android:textColor="#313945"
+                            android:textSize="40sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/auction_start_times"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/museosans_500"
+                            android:text="00:00:00:00"
+                            android:textColor="#898989"
+                            android:textSize="22sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/auction_start_amount" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/auction_start_bet_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:hint=" "
+                    android:visibility="gone"
+                    app:hintTextColor="#C5C5C5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/auction_start_progressbar_container"
+                    app:layout_goneMarginEnd="20dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/auction_start_bet_edit"
+                        android:layout_width="301dp"
+                        android:layout_height="54dp"
+                        android:background="@drawable/edit_text_transparent_style"
+                        android:fontFamily="@font/museosans_500"
+                        android:gravity="center"
+                        android:hint="$00000"
+                        android:inputType="numberDecimal"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:textColor="@color/secondary_color"
+                        android:textColorHint="#6D6D6D"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/auction_start_action_bet"
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="35dp"
+                    android:background="@drawable/button_style"
+                    android:fontFamily="@font/museosans_700"
+                    android:text="Pujar"
+                    android:textAllCaps="false"
+                    android:textColor="@color/primary_color"
+                    android:textSize="@dimen/button_text_size"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@id/auction_start_bet_layout"
+                    app:layout_constraintStart_toStartOf="@id/auction_start_bet_layout"
+                    app:layout_constraintTop_toBottomOf="@id/auction_start_bet_layout" />
+
+                <Button
+                    android:id="@+id/auction_start_action_bet_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="35dp"
+                    android:background="@drawable/button_style"
+                    android:fontFamily="@font/museosans_700"
+                    android:text="@string/auction_in_progress_button_text"
+                    android:textAllCaps="false"
+                    android:textColor="@color/primary_color"
+                    android:textSize="@dimen/button_text_size"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="@id/auction_start_progressbar_container"
+                    app:layout_constraintStart_toStartOf="@id/auction_start_progressbar_container"
+                    app:layout_constraintTop_toBottomOf="@id/auction_start_progressbar_container" />
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/auction_in_progres_progressbar"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:elevation="@dimen/default_gap"
+                    android:indeterminate="true"
+                    android:visibility="gone"
+                    app:indicatorColor="@color/primary_color"
+                    app:layout_constraintBottom_toBottomOf="@id/auction_start_action_bet_amount"
+                    app:layout_constraintEnd_toEndOf="@id/auction_start_action_bet_amount"
+                    app:layout_constraintStart_toStartOf="@id/auction_start_action_bet_amount"
+                    app:layout_constraintTop_toTopOf="@id/auction_start_action_bet_amount"
+                    app:trackColor="@color/secondary_color"
+                    app:trackThickness="4dp" />
+
+                <!--<TextView
+                    android:id="@+id/auction_in_progress_action_leave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/museosans_700"
+                    android:text="Abandonar subasta"
+                    android:textColor="@color/secondary_color"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/auction_start_action_bet" />-->
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginStart="@dimen/default_gap"
+                    android:layout_marginTop="200dp"
+                    android:layout_marginEnd="@dimen/default_gap"
+                    android:background="@drawable/line_white_dotted"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/auction_start_progressbar_container" />
+
+                <LinearLayout
+                    android:id="@+id/auction_in_progress_image_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#51556E"
+                    android:gravity="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/divider">
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/auction_in_progress_viewpager2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="120dp"
+                        android:paddingEnd="120dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/auction_in_progress_lot_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="35dp"
+                    android:fontFamily="@font/museosans_700"
+                    android:textColor="@color/secondary_color"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/auction_in_progress_image_container"
+                    tools:text="LOTE 0023" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/white_container_style"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/auction_in_progress_lot_title">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_blue_container_style">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/museosans_700"
+                            android:text="VALOR"
+                            android:textColor="@color/primary_color"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/auction_in_progress_price"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/museosans_700"
+                            android:textColor="@color/primary_color"
+                            android:textSize="24sp"
+                            tools:text="$12000" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/museosans_500"
+                            android:text="Peso"
+                            android:textColor="@color/primary_color"
+                            android:textSize="22sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/museosans_500"
+                            android:text="Medida"
+                            android:textColor="@color/primary_color"
+                            android:textSize="22sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent">
+
+                        <TextView
+                            android:id="@+id/auction_in_progress_weight"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/museosans_300"
+                            android:textColor="@color/primary_color"
+                            android:textSize="20sp"
+                            tools:text="12KG" />
+
+                        <TextView
+                            android:id="@+id/auction_in_progress_height"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/museosans_300"
+                            android:textColor="@color/primary_color"
+                            android:textSize="20sp"
+                            tools:text="Medida" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/divider2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="@dimen/default_gap"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="@dimen/default_gap"
+                        android:background="#C7C7C7" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/museosans_500"
+                            android:text="Fecha / Hora"
+                            android:textColor="@color/primary_color"
+                            android:textSize="22sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent">
+
+                        <TextView
+                            android:id="@+id/auction_in_progress_date"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/museosans_300"
+                            android:textColor="@color/primary_color"
+                            android:textSize="20sp"
+                            tools:text="Producto no perecedero" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/divider3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="@dimen/default_gap"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="@dimen/default_gap"
+                        android:background="#C7C7C7" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/museosans_500"
+                            android:text="Tipo de lote"
+                            android:textColor="@color/primary_color"
+                            android:textSize="22sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent">
+
+                        <TextView
+                            android:id="@+id/auction_in_progress_type"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="13dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/museosans_300"
+                            android:textColor="@color/primary_color"
+                            android:textSize="20sp"
+                            tools:text="12/05/2021" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</layout>
